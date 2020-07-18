@@ -3,7 +3,7 @@
 ### Technologies Used
 
 - TypeScript
-- Next.js Hybrid SSG / SSR
+- Next.js -> Hybrid SSG / SSR
 - React
 - Material UI
 - Apollo
