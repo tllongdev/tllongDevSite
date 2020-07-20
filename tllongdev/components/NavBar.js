@@ -108,21 +108,21 @@ export default () => {
 				<p>projects</p>
 			</MenuItem>
 			<MenuItem>
-				<IconButton aria-label='show 11 new notifications' color='inherit'>
+				<IconButton aria-label='contact' color='inherit'>
 					<AlternateEmailIcon />
 				</IconButton>
 				<p>contact</p>
 			</MenuItem>
 			<MenuItem onClick={handleProfileMenuOpen}>
-				<IconButton
+				<Avatar
 					aria-label='account of current user'
 					aria-controls='primary-search-account-menu'
 					aria-haspopup='true'
 					color='inherit'
 				>
 					<AccountCircle />
-				</IconButton>
-				<p>profile</p>
+				</Avatar>
+				<p>client login</p>
 			</MenuItem>
 		</Menu>
 	);
