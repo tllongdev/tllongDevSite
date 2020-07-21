@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
 	container: {
 		position: 'relative',
 		minWidth: '100%',
-		minHeight: '100%',
+		minHeight: '100vh',
 		overflow: 'hidden',
 		marginBottom: 500,
 		padding: 0,
