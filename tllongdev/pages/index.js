@@ -4,20 +4,19 @@ import NavBar from '../components/NavBar';
 import AsciiLogo from '../components/AsciiLogo';
 import VideoContainer from '../components/VideoContainer';
 import BlkContainer from '../components/BlkContainer';
+import IntroText from '../components/IntroText';
 
-let video1 = './AIvideo.mp4';
-let video2 = './80sRetroMix.mp4';
-let video3 = './SpaceTravel.mp4';
+const video1 = './AIvideo.mp4';
+const video2 = './80sRetroMix.mp4';
+const video3 = './SpaceTravel.mp4';
 const nodeIcon = './node-js.svg';
 
-const url = (name, wrap = false) =>
-	`${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`;
-
 export default function Home() {
+	const ref = useRef(null);
 	return (
 		<>
 			<NavBar />
-			<Parallax pages={3} id={'scrollTarget'}>
+			<Parallax pages={3} ref={ref}>
 				<ParallaxLayer offset={0} speed={1} factor={1}>
 					<VideoContainer video={video1} />
 				</ParallaxLayer>
@@ -31,12 +30,13 @@ export default function Home() {
 				</ParallaxLayer>
 
 				<ParallaxLayer offset={1.3} speed={-0.3} style={{ pointerEvents: 'none' }}>
-					<img src={nodeIcon} style={{ width: '15%', marginLeft: '70%' }} />
+					<img src={nodeIcon} style={{ width: '15%', marginLeft: '70%', opacity: '70%' }} />
 				</ParallaxLayer>
 
 				<ParallaxLayer
 					offset={0}
-					speed={3}
+          speed={2}
+          factor={1}
 					style={{
 						display: 'flex',
 						alignItems: 'center',
@@ -45,6 +45,7 @@ export default function Home() {
 				>
 					{/* <img src={url('bash')} style={{ width: '50%', minWidth: 333 }} /> */}
 					{/* <BlkContainer /> */}
+          <IntroText/>
 				</ParallaxLayer>
 			</Parallax>
 			<AsciiLogo />
