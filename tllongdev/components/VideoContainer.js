@@ -1,7 +1,6 @@
 import React from 'react';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Fade from '@material-ui/core/Fade';
-import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 
 const useStyles = makeStyles(theme => ({
@@ -10,12 +9,12 @@ const useStyles = makeStyles(theme => ({
 		minWidth: '100%',
 		minHeight: '100vh',
 		overflow: 'hidden',
-		marginBottom: 500,
+		// marginBottom: 500,
 		padding: 0,
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
-		zIndex: -1,
+		// zIndex: -1,
 	},
 	video: {
 		minWidth: '100%',
@@ -23,9 +22,8 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-let videoSource = './80sRetroMix.mp4';
 
-export default () => {
+export default ({video}) => {
 	const classes = useStyles();
 	const [checked, setChecked] = React.useState(true);
 	return (
@@ -38,7 +36,7 @@ export default () => {
 						muted
 						className={classes.video}
 					>
-						<source src={videoSource} type='video/mp4' />
+						<source src={video} type='video/mp4' />
 					</video>
 					{/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
 				</Container>

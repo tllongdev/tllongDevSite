@@ -136,10 +136,10 @@ export default function NavBar() {
 				// appear={true}
 				direction='down'
 				timeout={{
-          appear: 0,
-          enter: 500,
-          exit: 200,
-         }}
+					appear: 0,
+					enter: 0,
+					exit: 0,
+				}}
 				in={!trigger}
 			>
 				<div className={classes.grow}>
@@ -157,10 +157,7 @@ export default function NavBar() {
 									<p>projects</p>
 								</MenuItem>
 								<MenuItem>
-									<IconButton
-										aria-label='show 11 new notifications'
-										color='inherit'
-									>
+									<IconButton aria-label='show 11 new notifications' color='inherit'>
 										<AlternateEmailIcon />
 									</IconButton>
 									{/* <p>contact</p> */}
