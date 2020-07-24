@@ -3,6 +3,19 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ProjectCard from './ProjectCard';
 
+const testVid = './SpaceTravel.mp4';
+
+let projects = [
+	{
+		title: 'Translate Object',
+		technologies: 'Swift, Machine Learning, Google APIs',
+		shortDescription: 'Real-time object recognition and language translation iOS app',
+		description: '',
+		mediaType: 'video',
+		media: testVid,
+	},
+];
+
 const useStyles = makeStyles(theme => ({
 	container: {
 		width: '100%',
@@ -36,10 +49,17 @@ export default () => {
 		<React.Fragment>
 			<Paper className={classes.container} elevation={0}>
 				<Paper className={classes.projects} elevation={0}>
-					<ProjectCard />
-					<ProjectCard />
-					<ProjectCard />
-					<ProjectCard />
+					{projects.map((project, key) => (
+						<ProjectCard
+							key={key}
+							title={project.title}
+							technologies={project.technologies}
+							shortDescription={project.shortDescription}
+							description={project.description}
+							mediaType={project.mediaType}
+							media={project.media}
+						/>
+					))}
 				</Paper>
 			</Paper>
 		</React.Fragment>

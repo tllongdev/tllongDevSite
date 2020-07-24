@@ -14,24 +14,12 @@ const useStyles = makeStyles(theme => ({
 		borderRadius: 12,
 		opacity: 0.9,
 		minHeight: 151,
-		// maxHeight: '%',
 		minWidth: 345,
-		// width: 345,
-		// height: 345,
 		margin: '.5%',
 	},
 	inner: {
 		display: 'flex',
 		backgroundColor: '#23232300',
-		// border: '6px solid #181818',
-		// borderRadius: 12,
-		// opacity: 0.9,
-		// minHeight: 151,
-		// maxHeight: '%',
-		// minWidth: 345,
-		// width: 345,
-		// height: 345,
-		// margin: '.5%',
 	},
 	details: {
 		display: 'flex',
@@ -43,12 +31,21 @@ const useStyles = makeStyles(theme => ({
 	content: {
 		flex: '1 0 auto',
 	},
-	cover: {
+	mediaBox: {
+		display: 'flex',
+		alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
 		width: 151,
+		height: 151,
+	},
+	media: {
+		height: '100%',
+		width: 'auto',
 	},
 }));
 
-export default function MediaControlCard() {
+export default ({ title, technologies, shortDescription, description, mediaType, media }) => {
 	const classes = useStyles();
 	const theme = useTheme();
 
@@ -58,28 +55,26 @@ export default function MediaControlCard() {
 				<div className={classes.details}>
 					<CardContent className={classes.content}>
 						<Typography component='h5' variant='h5' style={{ fontFamily: 'sequel_sanssemi_bold_body' }}>
-							A Simple Component
+							{title}
 						</Typography>
-						<Typography variant='subtitle1' color='textSecondary' style={{ fontFamily: 'sequel_sansbook_body' }}>
-							React components implement a
+						<Typography variant='body2' style={{ fontFamily: 'sequel_sansbook_body' }}>
+							{shortDescription}
+						</Typography>
+						<Typography variant='caption' color='textSecondary' style={{ fontFamily: 'sequel_sansbook_body' }}>
+							{technologies}
 						</Typography>
 					</CardContent>
 				</div>
-				<img
-					className={classes.cover}
-					src={
-						'https://upload.wikimedia.org/wikipedia/en/3/3b/Official_Album_Cover_of_%22The_Downward_Spiral%22_by_Nine_Inch_Nails.png'
-					}
-					alt=''
-				/>
+				<div className={classes.mediaBox}>
+					{mediaType === 'image' ? (
+						<img className={classes.media} src={media} alt='' />
+					) : (
+						<video autoPlay='autoplay' loop='loop' muted className={classes.media}>
+							<source src={media} type='video/mp4' />
+						</video>
+					)}
+				</div>
 			</CardActionArea>
-			{/* <CardActionArea> */}
-			{/* <CardMedia
-					className={classes.cover}
-					image='https://upload.wikimedia.org/wikipedia/en/3/3b/Official_Album_Cover_of_%22The_Downward_Spiral%22_by_Nine_Inch_Nails.png'
-					title='The Downward Spiral'
-				/> */}
-			{/* </CardActionArea> */}
 		</Card>
 	);
-}
+};
