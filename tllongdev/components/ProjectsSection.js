@@ -5,21 +5,28 @@ import ProjectCard from './ProjectCard';
 
 const useStyles = makeStyles(theme => ({
 	container: {
-		width: '90%',
-		height: '93%',
-		minWidth: 333,
-		marginTop: 64,
-		// borderRadius: 12,
-		backgroundColor: '#23232390',
-		// fontFamily: 'Open Sans',
-		// fontWeight: '800',
-		// fontSize: '14vw',
-		// whiteSpace: 'pre-wrap',
+		width: '100%',
+		height: '100%',
+		borderRadius: 0,
+		backgroundColor: '#23232330',
+		// backgroundImage: 'url(https://vignette.wikia.nocookie.net/starwars/images/e/e0/The_Ultimate_Weapon.jpg)',
+		backgroundSize: 'cover',
+		opacity: '80%',
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'space-around',
-    flexWrap: 'wrap',
-    flexDirection: 'row,'
+		justifyContent: 'center',
+	},
+	projects: {
+		width: 'auto',
+		height: 'auto',
+		minWidth: 333,
+		maxWidth: 999,
+		marginTop: 64,
+		backgroundColor: '#23232300',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		flexWrap: 'wrap',
 	},
 }));
 
@@ -27,11 +34,13 @@ export default () => {
 	const classes = useStyles();
 	return (
 		<React.Fragment>
-			<Paper className={classes.container} elevation={3}>
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
-				<ProjectCard />
+			<Paper className={classes.container} elevation={0}>
+				<Paper className={classes.projects} elevation={0}>
+					<ProjectCard />
+					<ProjectCard />
+					<ProjectCard />
+					<ProjectCard />
+				</Paper>
 			</Paper>
 		</React.Fragment>
 	);
