@@ -7,6 +7,7 @@ import VideoContainer from '../components/VideoContainer';
 // import AboutSection from '../components/AboutSection';
 import IntroText from '../components/IntroText';
 import ImageContainer from '../components/ImageContainer';
+import ProjectsSection from '../components/ProjectsSection';
 
 const video1 = './AIvideo.mp4';
 const video2 = './80sRetroMix.mp4';
@@ -19,7 +20,7 @@ const DynamicAboutSection = dynamic(() => import('../components/AboutSection'));
 export default function Home() {
 	let parRef = useRef();
 	// const [page, setPage] = useState(0);
-	const handleScroll = page => (parRef.current.scrollTo(page), console.log(parRef));
+	const handleScroll = page => parRef.current.scrollTo(page);
 	// useLayoutEffect(() => parRef.current.scrollTo(page));
 
 	return (
@@ -70,7 +71,7 @@ export default function Home() {
 					<IntroText />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={0.98} speed={0.93} style={{ zIndex: -1 }}>
+				<ParallaxLayer offset={0.98} speed={0.93} style={{ zIndex: -1, opacity: 0.8 }}>
 					<ParallaxLayer offset={0} speed={-0.5} horizontal>
 						<ImageContainer image={thisIsFine} />
 					</ParallaxLayer>
@@ -89,20 +90,26 @@ export default function Home() {
 					onClick={() => handleScroll(1.5)}
 				>
 					{/* <AboutSection /> */}
-					<DynamicAboutSection />
+					<DynamicAboutSection onClick={() => handleScroll(1.5)} />
 				</ParallaxLayer>
-				{/* <ParallaxLayer
-					offset={1.5}
+				<ParallaxLayer offset={1.9} speed={0.9} style={{ zIndex: 0 }}>
+					<ParallaxLayer offset={0.9} speed={0.6} horizontal>
+						<h1 style={{ color: 'ededed', opacity: 0.7, fontFamily: 'Hack', fontSize: '22vw' }}>PROJECTS</h1>
+					</ParallaxLayer>
+				</ParallaxLayer>
+				<ParallaxLayer
+					offset={1.99}
 					speed={1}
 					factor={1}
 					style={{
 						display: 'flex',
 						alignItems: 'center',
 						justifyContent: 'center',
-						flexWrap: 'wrap',
+						// flexWrap: 'wrap',
 					}}
-					onClick={() => handleScroll(2)}
-				></ParallaxLayer> */}
+				>
+					<ProjectsSection />
+				</ParallaxLayer>
 				<ParallaxLayer
 					offset={2}
 					speed={1}

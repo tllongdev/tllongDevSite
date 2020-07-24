@@ -151,7 +151,9 @@ export default function NavBar({ parRef, handleScroll }) {
 				<div className={classes.grow}>
 					<AppBar position='fixed' className={classes.navBar}>
 						<Toolbar>
-							<TllongdevLogoWht />
+							<MenuItem style={{ padding: 0, borderRadius: 3}} onClick={() => handleScroll(0)}>
+								<TllongdevLogoWht />
+							</MenuItem>
 							<div className={classes.grow} />
 							<div className={classes.sectionDesktop}>
 								<MenuItem onClick={() => handleScroll(1)}>
