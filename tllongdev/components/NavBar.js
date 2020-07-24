@@ -7,6 +7,7 @@ import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import MenuIcon from '@material-ui/icons/Menu';
+import InfoIcon from '@material-ui/icons/Info';
 import WorkIcon from '@material-ui/icons/Work';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import AccountCircle from '@material-ui/icons/AccountCircle';
@@ -49,9 +50,9 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default function NavBar() {
+export default function NavBar({ parRef, handleScroll }) {
 	const classes = useStyles();
-	const trigger = useScrollTrigger();
+	const trigger = useScrollTrigger({ options: { disableHysteresis: true, target: parRef.current, threshold: 1 } });
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -102,7 +103,13 @@ export default function NavBar() {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem>
+			<MenuItem onClick={() => (handleScroll(1), handleMenuClose())}>
+				<IconButton aria-label='contact' color='inherit'>
+					<InfoIcon />
+				</IconButton>
+				<p>info</p>
+			</MenuItem>
+			<MenuItem onClick={() => (handleScroll(1.5), handleMenuClose())}>
 				<IconButton aria-label='featured projects' color='inherit'>
 					<Badge badgeContent={4} color='secondary'>
 						<WorkIcon />
@@ -110,7 +117,7 @@ export default function NavBar() {
 				</IconButton>
 				<p>projects</p>
 			</MenuItem>
-			<MenuItem>
+			<MenuItem onClick={() => (handleScroll(2), handleMenuClose())}>
 				<IconButton aria-label='contact' color='inherit'>
 					<AlternateEmailIcon />
 				</IconButton>
@@ -125,7 +132,6 @@ export default function NavBar() {
 				>
 					<AccountCircle />
 				</Avatar>
-				<p>client login</p>
 			</MenuItem>
 		</Menu>
 	);
@@ -148,15 +154,21 @@ export default function NavBar() {
 							<TllongdevLogoWht />
 							<div className={classes.grow} />
 							<div className={classes.sectionDesktop}>
-								<MenuItem>
+								<MenuItem onClick={() => handleScroll(1)}>
+									<IconButton aria-label='contact' color='inherit'>
+										<InfoIcon />
+									</IconButton>
+									{/* <p>info</p> */}
+								</MenuItem>
+								<MenuItem onClick={() => handleScroll(1.5)}>
 									<IconButton aria-label='featured projects' color='inherit'>
 										<Badge badgeContent={4} color='secondary'>
 											<WorkIcon />
 										</Badge>
 									</IconButton>
-									<p>projects</p>
+									{/* <p>projects</p> */}
 								</MenuItem>
-								<MenuItem>
+								<MenuItem onClick={() => handleScroll(2)}>
 									<IconButton aria-label='show 11 new notifications' color='inherit'>
 										<AlternateEmailIcon />
 									</IconButton>

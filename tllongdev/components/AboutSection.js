@@ -11,18 +11,12 @@ const useStyles = makeStyles(theme => ({
 		minWidth: 333,
 		maxWidth: 777,
 		borderRadius: 12,
-		backgroundColor: '#232323',
+		backgroundColor: '#23232390',
 		color: 'ededed',
 		fontFamily: 'krungthepregular',
-		// fontWeight: 'bolder',
 		fontSize: '2em',
 		whiteSpace: 'pre-wrap',
 		padding: 9,
-		opacity: 0.8,
-		// display: 'flex',
-		// alignItems: 'center',
-		// justifyContent: 'center',
-		// flexWrap: 'wrap',
 	},
 	imageContainer: {
 		width: '27%',
@@ -39,29 +33,18 @@ const useStyles = makeStyles(theme => ({
 		width: '100%',
 		paddingTop: '100%',
 		overflow: 'hidden',
-		// background: '#fff',
 		backgroundImage: `url(${gitProfileImage})`,
 		backgroundSize: 'cover',
 		opacity: '80%',
 	},
 	image: {
 		objectFit: 'cover',
-		// display: 'block',
-		// width: '100%',
-		// height: 'auto',
 	},
 }));
 
 export default () => {
 	const classes = useStyles();
 	const terminal = useRef();
-
-	// $(terminal).t({
-	// 	caret: '<span style="color:hotpink;">•</span>',
-	// 	typing: function (elm, chr) {
-	// 		if (chr.match(/\-trigger/)) $('#pow-txt').show().delay(500).fadeOut(0);
-	// 	},
-	// });
 
 	return (
 		<>
@@ -70,20 +53,14 @@ export default () => {
 			</div>
 			<div className={classes.terminalContainer}>
 				<Iframe
-					url='http://127.0.0.1:5500/index.html'
-					allow='autoplay'
+					url='https://tllongdev.github.io/AboutSection/'
+					// allow='autoplay'
 					width='100%'
 					height='100%'
-					display='initial'
+					// display='initial'
 					position='relative'
 					frameBorder='0'
 				/>
-				{/* <pre ref={terminal} style={{ whiteSpace: 'pre-wrap', fontFamily: 'krungthepregular' }}>
-					Hello{' '}
-					<ins>
-						<span></span>
-					</ins>
-				</pre> */}
 			</div>
 		</>
 	);
