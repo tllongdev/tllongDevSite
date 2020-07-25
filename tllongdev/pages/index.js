@@ -45,7 +45,6 @@ export default function Home() {
 				{/* <ParallaxLayer
 					offset={0}
 					speed={-0.9}
-					factor={3}
 					style={{
 						background: 'repeating-linear-gradient(-55deg, #232323, #00000080 2px, #232323 6px, #232323 3px)',
 						backgroundSize: 'cover',
@@ -53,14 +52,14 @@ export default function Home() {
 				/> */}
 
 				{/* Video Sections */}
-				<ParallaxLayer offset={0} speed={1} factor={1} style={{ zIndex: 1 }}>
+				<ParallaxLayer offset={0} speed={1} style={{ zIndex: 1 }}>
 					<VideoContainer video={video1} />
 				</ParallaxLayer>
-				<ParallaxLayer offset={1} speed={1} factor={1}>
+				<ParallaxLayer offset={1} speed={1}>
 					<VideoContainer video={video2} />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={1.99} speed={0.99} factor={1} style={{ opacity: '10%' }}>
+				<ParallaxLayer offset={1.99} speed={0.99} style={{ opacity: '10%' }}>
 					<VideoContainer video={video3} />
 				</ParallaxLayer>
 
@@ -107,8 +106,8 @@ export default function Home() {
 					<IntroText />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={0.98} speed={0.93} style={{ zIndex: -1, opacity: 0.8 }}>
-					<ParallaxLayer offset={0} speed={-0.2} horizontal>
+				<ParallaxLayer offset={0.98} speed={0.96} style={{ zIndex: -1, opacity: 0.8 }}>
+					<ParallaxLayer offset={0} speed={-0.5} horizontal>
 						<ImageContainer image={thisIsFine} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1} style={{ pointerEvents: 'none' }}>
@@ -134,7 +133,6 @@ export default function Home() {
 				<ParallaxLayer
 					offset={1}
 					speed={1}
-					factor={1}
 					style={{
 						display: 'flex',
 						alignItems: 'center',
@@ -156,7 +154,6 @@ export default function Home() {
 				<ParallaxLayer
 					offset={1.99}
 					speed={1}
-					factor={1}
 					style={{
 						display: 'flex',
 						alignItems: 'center',
@@ -169,7 +166,6 @@ export default function Home() {
 				<ParallaxLayer
 					offset={2}
 					speed={1}
-					factor={1}
 					style={{
 						display: 'flex',
 						alignItems: 'center',

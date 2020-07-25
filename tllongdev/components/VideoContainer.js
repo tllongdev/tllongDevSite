@@ -8,6 +8,7 @@ const useStyles = makeStyles(theme => ({
 		position: 'relative',
 		minWidth: '100%',
 		minHeight: '100vh',
+		maxHeight: '100vh',
 		overflow: 'hidden',
 		backgroundColor: '#000',
 		padding: 0,
