@@ -8,10 +8,10 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles(theme => ({
 	root: {
 		display: 'flex',
-		backgroundColor: '#23232300',
-		background: 'repeating-linear-gradient( #232323, #00000000 2px, #232323 3px, #232323 3px)',
-		border: '6px solid #181818',
-		borderRadius: 12,
+		backgroundColor: '#23232390',
+		// background: 'repeating-linear-gradient( #232323, #00000000 2px, #232323 3px, #232323 3px)',
+		// border: '6px solid #181818',
+		borderRadius: 16,
 		// opacity: 0.9,
 		minHeight: 151,
 		minWidth: 345,
@@ -20,16 +20,19 @@ const useStyles = makeStyles(theme => ({
 	},
 	inner: {
 		display: 'flex',
-		backgroundColor: '#23232300',
+		backgroundColor: '#23232390',
 	},
 	details: {
 		display: 'flex',
 		// flexDirection: 'column',
-		backgroundColor: '#23232390',
+    backgroundColor: '#23232300',
+    // borderRadius: 10,
+		// overflow: 'hidden',
 		height: '100%',
 		minWidth: 222,
 	},
 	content: {
+    backgroundColor: '#23232300',
 		// flex: '1 0 auto',
 		display: 'flex',
 		flexDirection: 'column',
@@ -40,7 +43,8 @@ const useStyles = makeStyles(theme => ({
 	mediaBox: {
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'center',
+    justifyContent: 'center',
+    borderRadius: 12,
 		overflow: 'hidden',
 		width: 151,
 		minWidth: '30%',
@@ -57,11 +61,11 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 	const theme = useTheme();
 
 	return (
-		<Card className={classes.root} elevation={6}>
+		<Card className={classes.root} elevation={3}>
 			<CardActionArea className={classes.inner}>
 				<div className={classes.details}>
 					<CardContent className={classes.content}>
-						<Typography component='h5' variant='h5' style={{ fontFamily: 'sequel_sanssemi_bold_body' }}>
+						<Typography component='h5' variant='h5' style={{ fontFamily: 'sequel_sansbold_body' }}>
 							{title}
 						</Typography>
 						<Typography variant='body2' style={{ fontFamily: 'sequel_sansbook_body' }}>

@@ -5,6 +5,7 @@ import ProjectCard from './ProjectCard';
 import Typography from '@material-ui/core/Typography';
 
 const testVid = './SpaceTravel.mp4';
+const testImg = 'https://image.freepik.com/free-psd/smartphone-mockup_1310-920.jpg';
 
 let projects = [
 	{
@@ -12,32 +13,32 @@ let projects = [
 		technologies: 'Swift, Machine Learning, Google APIs',
 		shortDescription: 'Real-time object recognition and language translation iOS app',
 		description: '',
-		mediaType: 'video',
-		media: testVid,
+		mediaType: 'image',
+		media: testImg,
 	},
 	{
 		title: 'Crowd Merit',
 		technologies: 'Redwood.js, React, Material UI, GraphQL, Apollo, Prisma, AWS Lambdas, Postgres',
 		shortDescription: 'Crowd-sourced algorithmic decision making',
 		description: '',
-		mediaType: 'video',
-		media: testVid,
+		mediaType: 'image',
+		media: testImg,
 	},
 	{
 		title: 'MERTH',
 		technologies: 'Puppeteer.js, Traveling Salesman Algorithm, Node.js',
-		shortDescription: 'Returns a Home Depot store map with most the efficient shopping route plotted',
+		shortDescription: 'Returns a Home Depot store map with the most efficient shopping route plotted',
 		description: '',
-		mediaType: 'video',
-		media: testVid,
+		mediaType: 'image',
+		media: testImg,
 	},
 	{
-		title: 'Cove',
+		title: 'Le Magasin',
 		technologies: 'React, Redux, Postgres, Sequelize, Express, Node.js, OAuth',
 		shortDescription: 'Full Stack eCommerce Website',
 		description: '',
-		mediaType: 'video',
-		media: testVid,
+		mediaType: 'image',
+		media: testImg,
 	},
 ];
 

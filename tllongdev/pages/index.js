@@ -11,7 +11,7 @@ import ProjectsSection from '../components/ProjectsSection';
 
 const video1 = './AIvideo.mp4';
 const video2 = './80sRetroMix.mp4';
-const video3 = './SpaceTravel.mp4';
+const video3 = './DeathStarPlans.mp4';
 
 const thisIsFine = './ThisIsFineGolang.png';
 
@@ -60,7 +60,7 @@ export default function Home() {
 					<VideoContainer video={video2} />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={2} speed={1} factor={1} style={{ zIndex: 1 }}>
+				<ParallaxLayer offset={1.99} speed={0.99} factor={1} style={{ opacity: '10%' }}>
 					<VideoContainer video={video3} />
 				</ParallaxLayer>
 
@@ -108,26 +108,26 @@ export default function Home() {
 				</ParallaxLayer>
 
 				<ParallaxLayer offset={0.98} speed={0.93} style={{ zIndex: -1, opacity: 0.8 }}>
-					<ParallaxLayer offset={-0.6} speed={-0.5} horizontal>
+					<ParallaxLayer offset={0} speed={-0.2} horizontal>
 						<ImageContainer image={thisIsFine} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1} style={{ pointerEvents: 'none' }}>
-						<img src={vimIcon} style={{ width: '20%', marginLeft: '20%', opacity: '60%' }} />
+						<img src={vimIcon} style={{ width: '20%', marginLeft: '20%', opacity: '20%' }} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1.8} style={{ pointerEvents: 'none' }}>
-						<img src={railsIcon} style={{ width: '20%', marginLeft: '55%', opacity: '40%' }} />
+						<img src={railsIcon} style={{ width: '20%', marginLeft: '55%', opacity: '20%' }} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1.2} style={{ pointerEvents: 'none' }}>
-						<img src={kubernetesIcon} style={{ width: '20%', marginLeft: '85%', opacity: '50%' }} />
+						<img src={kubernetesIcon} style={{ width: '20%', marginLeft: '85%', opacity: '20%' }} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1.1} style={{ pointerEvents: 'none' }}>
-						<img src={awsIcon} style={{ width: '20%', marginLeft: '45%', opacity: '70%' }} />
+						<img src={awsIcon} style={{ width: '20%', marginLeft: '45%', opacity: '20%' }} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={0.7} style={{ pointerEvents: 'none' }}>
-						<img src={pythonIcon} style={{ width: '10%', marginLeft: '6%', opacity: '70%' }} />
+						<img src={pythonIcon} style={{ width: '10%', marginLeft: '6%', opacity: '20%' }} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1.6} style={{ pointerEvents: 'none' }}>
-						<img src={swiftIcon} style={{ width: '10%', marginLeft: '5%', opacity: '70%' }} />
+						<img src={swiftIcon} style={{ width: '10%', marginLeft: '5%', opacity: '20%' }} />
 					</ParallaxLayer>
 				</ParallaxLayer>
 
@@ -148,7 +148,7 @@ export default function Home() {
 				</ParallaxLayer>
 				<ParallaxLayer offset={1.92} speed={0.9} style={{ zIndex: 0 }}>
 					<ParallaxLayer offset={0.9} speed={0.6} horizontal>
-						<h1 style={{ color: 'ededed', opacity: 0.2, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '18vw' }}>
+						<h1 style={{ color: 'ededed', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '18vw' }}>
 							PROJECTS
 						</h1>
 					</ParallaxLayer>
