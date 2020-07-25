@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ProjectCard from './ProjectCard';
+import Typography from '@material-ui/core/Typography';
 
 const testVid = './SpaceTravel.mp4';
 
@@ -14,6 +15,30 @@ let projects = [
 		mediaType: 'video',
 		media: testVid,
 	},
+	{
+		title: 'Crowd Merit',
+		technologies: 'Redwood.js, React, Material UI, GraphQL, Apollo, Prisma, AWS Lambdas, Postgres',
+		shortDescription: 'Crowd-sourced algorithmic decision making',
+		description: '',
+		mediaType: 'video',
+		media: testVid,
+	},
+	{
+		title: 'MERTH',
+		technologies: 'Puppeteer.js, Traveling Salesman Algorithm, Node.js',
+		shortDescription: 'Returns a Home Depot store map with most the efficient shopping route plotted',
+		description: '',
+		mediaType: 'video',
+		media: testVid,
+	},
+	{
+		title: 'Cove',
+		technologies: 'React, Redux, Postgres, Sequelize, Express, Node.js, OAuth',
+		shortDescription: 'Full Stack eCommerce Website',
+		description: '',
+		mediaType: 'video',
+		media: testVid,
+	},
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -21,11 +46,10 @@ const useStyles = makeStyles(theme => ({
 		width: '100%',
 		height: '100%',
 		borderRadius: 0,
-		backgroundColor: '#23232330',
-		// backgroundImage: 'url(https://vignette.wikia.nocookie.net/starwars/images/e/e0/The_Ultimate_Weapon.jpg)',
+		backgroundColor: '#23232300',
 		backgroundSize: 'cover',
-		opacity: '80%',
 		display: 'flex',
+		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
 	},

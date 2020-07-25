@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
 					<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css' />
 					<link rel='stylesheet' href='./fonts/fonts.css' />
 				</Head>
-				<body style={{ overscrollBehaviorY: 'none', overscrollBehaviorX: 'none' }}>
+				<body style={{ overscrollBehaviorY: 'none', overscrollBehaviorX: 'none', backgroundColor: '#232323', }}>
 					<Main />
 					<NextScript />
 				</body>

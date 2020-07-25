@@ -9,7 +9,7 @@ const useStyles = makeStyles(theme => ({
 		minWidth: '100%',
 		minHeight: '100vh',
 		overflow: 'hidden',
-		// marginBottom: 500,
+		backgroundColor: '#000',
 		padding: 0,
 		display: 'flex',
 		flexDirection: 'column',
@@ -22,20 +22,14 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-
-export default ({video}) => {
+export default ({ video }) => {
 	const classes = useStyles();
 	const [checked, setChecked] = React.useState(true);
 	return (
 		<React.Fragment>
 			<Fade in={true} timeout={50}>
 				<Container className={classes.container}>
-					<video
-						autoPlay='autoplay'
-						loop='loop'
-						muted
-						className={classes.video}
-					>
+					<video autoPlay='autoplay' loop='loop' muted className={classes.video}>
 						<source src={video} type='video/mp4' />
 					</video>
 					{/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
