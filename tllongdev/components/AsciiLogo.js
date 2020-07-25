@@ -11,6 +11,6 @@ export default () => (
 				'                   /____/                    ',
 			].join('\n')
 		)}
-		{console.log('https://github.com/tllongdev')}
+		{console.log('\nhttps://github.com/tllongdev\n\n')}
 	</>
 );

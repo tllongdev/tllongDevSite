@@ -53,11 +53,12 @@ export default () => {
 			</div>
 			<div className={classes.terminalContainer}>
 				<Iframe
+					loading='lazy'
 					url='https://tllongdev.github.io/AboutSection/'
 					// allow='autoplay'
 					width='100%'
 					height='100%'
-					// display='initial'
+					display='initial'
 					position='relative'
 					frameBorder='0'
 				/>
