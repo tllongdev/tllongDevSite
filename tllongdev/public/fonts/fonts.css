@@ -33,11 +33,9 @@
 
 @font-face {
 	font-family: 'matrix';
-	src: url('matrix_code_nfi-webfont.woff2') format('woff2'),
-			 url('matrix_code_nfi-webfont.woff') format('woff');
+	src: url('matrix_code_nfi-webfont.woff2') format('woff2'), url('matrix_code_nfi-webfont.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
-
 }
 
 ::-webkit-scrollbar {

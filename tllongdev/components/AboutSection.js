@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	imageContainer: {
 		width: '27%',
-		minWidth: 200,
+		minWidth: 180,
 		maxWidth: 280,
 		height: '27%',
 		display: 'flex',

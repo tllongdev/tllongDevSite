@@ -54,23 +54,41 @@ const useStyles = makeStyles(theme => ({
 		height: 151,
 	},
 	media: {
-		height: '100%',
+		maxHeight: '100%',
 		width: 'auto',
-	},
-	// modal
+  },
+  //modal
 	modal: {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
 		backgroundColor: '#23232390',
 		outline: 'none',
+		maxHeight: '100vh',
 	},
 	paper: {
-    backgroundColor: '#23232390',
+		maxWidth: '90%',
+		backgroundColor: '#23232390',
 		border: 'none',
 		boxShadow: theme.shadows[5],
 		padding: theme.spacing(2, 4, 3),
-    outline: 'none',
+		outline: 'none',
+	},
+	modalMediaBox: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		borderRadius: 12,
+		overflow: 'hidden',
+		width: 'auto',
+		height: '50vh',
+		// minWidth: '30%',
+		maxHeight: '50vh',
+    whiteSpace: 'no-wrap',
+	},
+	modalMedia: {
+		maxHeight: '100%',
+		maxWidth: '100%',
 	},
 }));
 
@@ -92,7 +110,10 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 	return (
 		<>
 			<Card className={classes.root} elevation={3}>
-				<CardActionArea className={classes.inner} onClick={handleOpen}>
+				<CardActionArea
+					className={classes.inner}
+					onClick={(() => (document.body.style.position = 'fixed'), handleOpen)}
+				>
 					<div className={classes.details}>
 						<CardContent className={classes.content}>
 							<Typography component='h5' variant='h5' style={{ fontFamily: 'sequel_sansbold_body' }}>
@@ -132,9 +153,19 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 					}}
 				>
 					<Fade in={open}>
-						<div className={classes.paper}>
-							<h2 id='transition-modal-title'>Transition modal</h2>
-							<p id='transition-modal-description'>react-transition-group animates me.</p>
+						<div className={classes.paper} onClick={handleClose}>
+							<div className={classes.modalMediaBox}>
+								{mediaType === 'image' ? (
+									<img className={classes.modalMedia} src={media} alt='' />
+								) : (
+									<video autoPlay='autoplay' loop='loop' muted className={classes.modalMedia}>
+										<source src={media} type='video/mp4' />
+									</video>
+								)}
+							</div>
+							<h2 id='transition-modal-title'>{title}</h2>
+							<p style={{fontSize: `clamp(11.5px,min(((1vw + 1vh)/2)*2), 16px)`}}id='transition-modal-description'>{description}</p>
+							<p style={{fontSize: `clamp(11px,min(((1vw + 1vh)/2)*2), 13px)`}}id='transition-modal-description'>technologies: {technologies}</p>
 						</div>
 					</Fade>
 				</Modal>

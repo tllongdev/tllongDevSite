@@ -139,7 +139,7 @@ export default function NavBar({ parRef, handleScroll }) {
 	return (
 		<React.Fragment>
 			<Grow
-				// appear={true}
+				appear={true}
 				direction='down'
 				timeout={{
 					appear: 0,
@@ -151,8 +151,8 @@ export default function NavBar({ parRef, handleScroll }) {
 				<div className={classes.grow}>
 					<AppBar position='fixed' className={classes.navBar}>
 						<Toolbar>
-							<MenuItem style={{ padding: 0, borderRadius: 3}} onClick={() => handleScroll(0)}>
-								<TllongdevLogoWht />
+							<MenuItem style={{ padding: 0, borderRadius: 3 }} onClick={() => handleScroll(0)}>
+								<TllongdevLogoWht style={{ height: 44, width: 'auto' }} />
 							</MenuItem>
 							<div className={classes.grow} />
 							<div className={classes.sectionDesktop}>

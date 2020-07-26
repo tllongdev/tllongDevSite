@@ -41,16 +41,7 @@ export default function Home() {
 	return (
 		<>
 			<NavBar parRef={parRef} handleScroll={handleScroll} />
-			<Parallax pages={3} ref={parRef}>
-				{/* <ParallaxLayer
-					offset={0}
-					speed={-0.9}
-					style={{
-						background: 'repeating-linear-gradient(-55deg, #232323, #00000080 2px, #232323 6px, #232323 3px)',
-						backgroundSize: 'cover',
-					}}
-				/> */}
-
+			<Parallax pages={3} ref={parRef} style={{ position: 'fixed' }}>
 				{/* Video Sections */}
 				<ParallaxLayer offset={0} speed={1} style={{ zIndex: 1 }}>
 					<VideoContainer video={video1} />
