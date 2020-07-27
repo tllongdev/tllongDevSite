@@ -156,11 +156,11 @@ export default function NavBar({ parRef, handleScroll }) {
 							</MenuItem>
 							<div className={classes.grow} />
 							<div className={classes.sectionDesktop}>
-								<MenuItem onClick={() => handleScroll(1)}>
+								<MenuItem label='about' onClick={() => handleScroll(1)}>
 									<IconButton aria-label='contact' color='inherit'>
 										<InfoIcon />
 									</IconButton>
-									{/* <p>info</p> */}
+									<p>info</p>
 								</MenuItem>
 								<MenuItem onClick={() => handleScroll(1.5)}>
 									<IconButton aria-label='featured projects' color='inherit'>
@@ -168,13 +168,13 @@ export default function NavBar({ parRef, handleScroll }) {
 											<WorkIcon />
 										</Badge>
 									</IconButton>
-									{/* <p>projects</p> */}
+									<p>projects</p>
 								</MenuItem>
 								<MenuItem onClick={() => handleScroll(2)}>
 									<IconButton aria-label='show 11 new notifications' color='inherit'>
 										<AlternateEmailIcon />
 									</IconButton>
-									{/* <p>contact</p> */}
+									<p>contact</p>
 								</MenuItem>
 								<MenuItem>
 									<Avatar

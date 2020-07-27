@@ -7,6 +7,11 @@ import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import Link from '@material-ui/core/Link';
+import IconButton from '@material-ui/core/IconButton';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import LinkIcon from '@material-ui/icons/Link';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -55,9 +60,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	media: {
 		maxHeight: '100%',
-		width: 'auto',
-  },
-  //modal
+		width: '100%',
+	},
+	//modal
 	modal: {
 		display: 'flex',
 		alignItems: 'center',
@@ -84,7 +89,7 @@ const useStyles = makeStyles(theme => ({
 		height: '50vh',
 		// minWidth: '30%',
 		maxHeight: '50vh',
-    whiteSpace: 'no-wrap',
+		whiteSpace: 'no-wrap',
 	},
 	modalMedia: {
 		maxHeight: '100%',
@@ -92,7 +97,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default ({ title, technologies, shortDescription, description, mediaType, media }) => {
+export default ({ title, technologies, shortDescription, description, mediaType, media, links }) => {
 	const classes = useStyles();
 	const theme = useTheme();
 
@@ -163,9 +168,20 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 									</video>
 								)}
 							</div>
-							<h2 id='transition-modal-title'>{title}</h2>
-							<p style={{fontSize: `clamp(11.5px,min(((1vw + 1vh)/2)*2), 16px)`}}id='transition-modal-description'>{description}</p>
-							<p style={{fontSize: `clamp(11px,min(((1vw + 1vh)/2)*2), 13px)`}}id='transition-modal-description'>technologies: {technologies}</p>
+							<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }}id='transition-modal-title'>
+								{title}{' '}
+								{links.map((link, key) => (
+									<IconButton key={key} href={link.link} target='_blank'>
+										{link.type === 'GitHub' ? <GitHubIcon /> : link.type === 'YouTube' ? <YouTubeIcon /> : <LinkIcon />}
+									</IconButton>
+								))}
+							</h2>
+							<p style={{ fontSize: `clamp(11.5px,min(((1vw + 1vh)/2)*2), 16px)` }} id='transition-modal-description'>
+								{description}
+							</p>
+							<p style={{ fontSize: `clamp(11px,min(((1vw + 1vh)/2)*2), 13px)` }} id='transition-modal-description'>
+								Technologies: {technologies}
+							</p>
 						</div>
 					</Fade>
 				</Modal>
