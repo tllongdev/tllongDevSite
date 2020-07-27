@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import ProjectCard from './ProjectCard';
-import Typography from '@material-ui/core/Typography';
 
 const transObjVid = './TranslateObjDemo.mp4';
 const testImg = 'https://image.freepik.com/free-psd/smartphone-mockup_1310-920.jpg';

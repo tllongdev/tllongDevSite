@@ -123,7 +123,7 @@ export default function NavBar({ parRef, handleScroll }) {
 				</IconButton>
 				<p>contact</p>
 			</MenuItem>
-			<MenuItem onClick={handleProfileMenuOpen}>
+			{/* <MenuItem onClick={handleProfileMenuOpen}>
 				<Avatar
 					aria-label='account of current user'
 					aria-controls='primary-search-account-menu'
@@ -132,7 +132,7 @@ export default function NavBar({ parRef, handleScroll }) {
 				>
 					<AccountCircle />
 				</Avatar>
-			</MenuItem>
+			</MenuItem> */}
 		</Menu>
 	);
 
@@ -176,7 +176,7 @@ export default function NavBar({ parRef, handleScroll }) {
 									</IconButton>
 									<p>contact</p>
 								</MenuItem>
-								<MenuItem>
+								{/* <MenuItem>
 									<Avatar
 										edge='end'
 										aria-label='account of current user'
@@ -187,7 +187,7 @@ export default function NavBar({ parRef, handleScroll }) {
 									>
 										<AccountCircle />
 									</Avatar>
-								</MenuItem>
+								</MenuItem> */}
 							</div>
 							<div className={classes.sectionMobile}>
 								<IconButton

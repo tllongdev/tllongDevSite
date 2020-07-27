@@ -8,6 +8,8 @@ import VideoContainer from '../components/VideoContainer';
 import IntroText from '../components/IntroText';
 import ImageContainer from '../components/ImageContainer';
 import ProjectsSection from '../components/ProjectsSection';
+import ContactSection from '../components/ContactSection';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const video1 = './AIvideo.mp4';
 const video2 = './80sRetroMix.mp4';
@@ -96,6 +98,21 @@ export default function Home() {
 				>
 					<IntroText />
 				</ParallaxLayer>
+				<ParallaxLayer
+					offset={0}
+					speed={1}
+					style={{
+						display: 'flex',
+						alignItems: 'flex-end',
+						justifyContent: 'center',
+						zIndex: 1,
+					}}
+					onClick={() => handleScroll(1)}
+				>
+					<ExpandMoreIcon fontSize='large'/>
+					<ExpandMoreIcon fontSize='large'/>
+					<ExpandMoreIcon fontSize='large'/>
+				</ParallaxLayer>
 
 				<ParallaxLayer offset={0.98} speed={0.96} style={{ zIndex: -1, opacity: 0.8 }}>
 					<ParallaxLayer offset={0} speed={-0.5} horizontal>
@@ -163,8 +180,9 @@ export default function Home() {
 						justifyContent: 'center',
 						flexWrap: 'wrap',
 					}}
-					onClick={() => handleScroll(0)}
-				></ParallaxLayer>
+				>
+					<ContactSection />
+				</ParallaxLayer>
 			</Parallax>
 			<AsciiLogo />
 		</>
