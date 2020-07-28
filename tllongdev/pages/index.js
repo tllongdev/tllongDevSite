@@ -15,7 +15,7 @@ const video1 = './AIvideoMobile.mp4';
 const video2 = './80sRetroMix.mp4';
 const video3 = './DeathStarPlans.mp4';
 
-const thisIsFine = './ThisIsFineGolang.png';
+const thisIsFine = './ThisIsFineGolang2048.png';
 
 const nodeIcon = './svgIcons/node-js.svg';
 const reactIcon = './svgIcons/React-icon.svg';
@@ -115,7 +115,7 @@ export default function Home() {
 					<ExpandMoreIcon fontSize='large' />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={0.98} speed={0.96} style={{ opacity: 0.9 }}>
+				<ParallaxLayer offset={0.98} speed={0.96} style={{ zIndex: -1, opacity: 0.8 }}>
 					<ParallaxLayer offset={0} speed={-0.5} horizontal>
 						<ImageContainer image={thisIsFine} />
 					</ParallaxLayer>
@@ -176,7 +176,7 @@ export default function Home() {
 				</ParallaxLayer>
 
 				<ParallaxLayer
-					offset={2}
+					offset={2.2}
 					speed={1}
 					style={{
 						display: 'flex',

@@ -122,9 +122,12 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 				>
 					<div className={classes.details}>
 						<CardContent className={classes.content}>
-							<Typography component='h5' variant='h5'>
+							<h2
+								style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)`, margin: '0px 0px' }}
+								id='transition-modal-title'
+							>
 								{title}
-							</Typography>
+							</h2>
 							<Typography variant='body2'>{shortDescription}</Typography>
 							<Typography variant='caption' color='textSecondary'>
 								{technologies}
@@ -153,7 +156,7 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 					<Fade in={open}>
 						<div className={classes.paper} onClick={handleClose}>
 							<div className={classes.modalMediaBox}>
-								<ProjectMedia mediaType={mediaType} media={media} loading='eager' />
+								<ProjectMedia mediaType={mediaType} media={media} />
 							</div>
 							<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }} id='transition-modal-title'>
 								{title}{' '}
