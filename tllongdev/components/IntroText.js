@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 		minWidth: 333,
 		borderRadius: 12,
 		backgroundColor: '#23232300',
-		fontFamily: 'sequel_sanssemi_bold_body',
+		fontFamily: 'sequel_sanssemi_bold_body, roboto',
 		fontWeight: '800',
 		fontSize: '12vw',
 		whiteSpace: 'pre-wrap',

@@ -89,8 +89,8 @@ const useStyles = makeStyles(theme => ({
 		width: 'auto',
 		height: '50vh',
 		// minWidth: '30%',
-		maxHeight: '50vh',
-		whiteSpace: 'no-wrap',
+		// maxHeight: '50vh',
+		// whiteSpace: 'no-wrap',
 	},
 	modalMedia: {
 		maxHeight: '100%',
@@ -122,13 +122,11 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 				>
 					<div className={classes.details}>
 						<CardContent className={classes.content}>
-							<Typography component='h5' variant='h5' style={{ fontFamily: 'sequel_sansbold_body' }}>
+							<Typography component='h5' variant='h5'>
 								{title}
 							</Typography>
-							<Typography variant='body2' style={{ fontFamily: 'sequel_sansbook_body' }}>
-								{shortDescription}
-							</Typography>
-							<Typography variant='caption' color='textSecondary' style={{ fontFamily: 'sequel_sansbook_body' }}>
+							<Typography variant='body2'>{shortDescription}</Typography>
+							<Typography variant='caption' color='textSecondary'>
 								{technologies}
 							</Typography>
 						</CardContent>

@@ -4,7 +4,6 @@ import Paper from '@material-ui/core/Paper';
 import ProjectCard from './ProjectCard';
 
 const transObjVid = './TranslateObjDemo.mp4';
-const testImg = 'https://image.freepik.com/free-psd/smartphone-mockup_1310-920.jpg';
 
 let projects = [
 	{

@@ -98,6 +98,7 @@ export default function Home() {
 				>
 					<IntroText />
 				</ParallaxLayer>
+
 				<ParallaxLayer
 					offset={0}
 					speed={1}
@@ -109,16 +110,16 @@ export default function Home() {
 					}}
 					onClick={() => handleScroll(1)}
 				>
-					<ExpandMoreIcon fontSize='large'/>
-					<ExpandMoreIcon fontSize='large'/>
-					<ExpandMoreIcon fontSize='large'/>
+					<ExpandMoreIcon fontSize='large' />
+					<ExpandMoreIcon fontSize='large' />
+					<ExpandMoreIcon fontSize='large' />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={0.98} speed={0.96} style={{ zIndex: -1, opacity: 0.8 }}>
+				<ParallaxLayer offset={0.98} speed={0.96} style={{ opacity: 0.9 }}>
 					<ParallaxLayer offset={0} speed={-0.5} horizontal>
 						<ImageContainer image={thisIsFine} />
 					</ParallaxLayer>
-					<ParallaxLayer offset={0.99} speed={1} style={{ pointerEvents: 'none' }}>
+					{/* <ParallaxLayer offset={0.99} speed={1} style={{ pointerEvents: 'none' }}>
 						<img src={vimIcon} style={{ width: '20%', marginLeft: '20%', opacity: '20%' }} />
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1.8} style={{ pointerEvents: 'none' }}>
@@ -135,7 +136,7 @@ export default function Home() {
 					</ParallaxLayer>
 					<ParallaxLayer offset={0.99} speed={1.6} style={{ pointerEvents: 'none' }}>
 						<img src={swiftIcon} style={{ width: '10%', marginLeft: '5%', opacity: '20%' }} />
-					</ParallaxLayer>
+					</ParallaxLayer> */}
 				</ParallaxLayer>
 
 				<ParallaxLayer
@@ -152,6 +153,7 @@ export default function Home() {
 					{/* <AboutSection /> */}
 					<DynamicAboutSection onClick={() => handleScroll(1.5)} />
 				</ParallaxLayer>
+
 				<ParallaxLayer offset={1.92} speed={0.9} style={{ zIndex: 0 }}>
 					<ParallaxLayer offset={0.9} speed={0.6} horizontal>
 						<h1 style={{ color: 'ededed', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '18vw' }}>
@@ -159,6 +161,7 @@ export default function Home() {
 						</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
+
 				<ParallaxLayer
 					offset={1.99}
 					speed={1}
@@ -171,6 +174,7 @@ export default function Home() {
 				>
 					<ProjectsSection />
 				</ParallaxLayer>
+
 				<ParallaxLayer
 					offset={2}
 					speed={1}
