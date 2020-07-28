@@ -45,13 +45,16 @@ export default () => {
 						<Typography component='div'>Thanks for stopping by!</Typography>
 						<Typography component='div'>...feel free to reach out :)</Typography>
 						<div>
-							<IconButton href='https://github.com/tllongdev'>
+							<IconButton href='https://github.com/tllongdev' target='_blank'>
 								<GitHubIcon />
 							</IconButton>
-							<IconButton href='https://www.linkedin.com/in/timothyleelong/'>
+							<IconButton href='https://www.linkedin.com/in/timothyleelong/' target='_blank'>
 								<LinkedInIcon />
 							</IconButton>
-							<IconButton href='mailto:tllongdev@gmail.com?subject=Reaching Out From Your Website (tllong.dev)&body=Hi, Tim'>
+							<IconButton
+								href='mailto:tllongdev@gmail.com?subject=Reaching Out From Your Website (tllong.dev)&body=Hi, Tim'
+								target='_blank'
+							>
 								<EmailIcon />
 							</IconButton>
 						</div>
