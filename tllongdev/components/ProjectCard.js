@@ -155,7 +155,7 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 					<Fade in={open}>
 						<div className={classes.paper} onClick={handleClose}>
 							<div className={classes.modalMediaBox}>
-								<ProjectMedia mediaType={mediaType} media={media} />
+								<ProjectMedia mediaType={mediaType} media={media} loading='eager' />
 							</div>
 							<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }} id='transition-modal-title'>
 								{title}{' '}
