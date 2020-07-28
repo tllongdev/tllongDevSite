@@ -11,7 +11,7 @@ import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-const video1 = './AIvideo.mp4';
+const video1 = './AIvideoMobile.mp4';
 const video2 = './80sRetroMix.mp4';
 const video3 = './DeathStarPlans.mp4';
 

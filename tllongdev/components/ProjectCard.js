@@ -12,6 +12,7 @@ import IconButton from '@material-ui/core/IconButton';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkIcon from '@material-ui/icons/Link';
+import ProjectMedia from './ProjectMedia';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -60,7 +61,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	media: {
 		maxHeight: '100%',
-		width: '100%',
+		maxWidth: '100%',
 	},
 	//modal
 	modal: {
@@ -133,13 +134,7 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 						</CardContent>
 					</div>
 					<div className={classes.mediaBox}>
-						{mediaType === 'image' ? (
-							<img className={classes.media} src={media} alt='' />
-						) : (
-							<video autoPlay='autoplay' loop='loop' muted className={classes.media}>
-								<source src={media} type='video/mp4' />
-							</video>
-						)}
+						<ProjectMedia mediaType={mediaType} media={media} />
 					</div>
 				</CardActionArea>
 			</Card>
@@ -160,15 +155,9 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 					<Fade in={open}>
 						<div className={classes.paper} onClick={handleClose}>
 							<div className={classes.modalMediaBox}>
-								{mediaType === 'image' ? (
-									<img className={classes.modalMedia} src={media} alt='' />
-								) : (
-									<video autoPlay='autoplay' loop='loop' muted className={classes.modalMedia}>
-										<source src={media} type='video/mp4' />
-									</video>
-								)}
+								<ProjectMedia mediaType={mediaType} media={media} />
 							</div>
-							<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }}id='transition-modal-title'>
+							<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }} id='transition-modal-title'>
 								{title}{' '}
 								{links.map((link, key) => (
 									<IconButton key={key} href={link.link} target='_blank'>
