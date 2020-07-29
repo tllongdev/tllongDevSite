@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 		minWidth: 333,
 		maxWidth: 777,
 		borderRadius: 12,
-		backgroundColor: '#23232390',
+		backgroundColor: '#23232399',
 		color: 'ededed',
 		fontFamily: 'krungthepregular',
 		fontSize: '2em',
@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
 		overflow: 'hidden',
 		backgroundImage: `url(${gitProfileImage})`,
 		backgroundSize: 'cover',
-		opacity: '80%',
+		opacity: '90%',
 	},
 	image: {
 		objectFit: 'cover',

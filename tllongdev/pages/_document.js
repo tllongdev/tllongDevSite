@@ -17,7 +17,7 @@ export default class MyDocument extends Document {
 					/>
 					<link rel='stylesheet' href='./fonts/fonts.css' />
 				</Head>
-				<body style={{ overscrollBehaviorY: 'none', overscrollBehaviorX: 'none', backgroundColor: '#232323', }}>
+				<body style={{ overscrollBehaviorX: 'none', backgroundColor: '#232323' }}>
 					<Main />
 					<NextScript />
 				</body>

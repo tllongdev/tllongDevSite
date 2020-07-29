@@ -6,37 +6,42 @@ import { useSpring, animated, config } from 'react-spring';
 
 const useStyles = makeStyles(theme => ({
 	container: {
-		width: '90%',
-		height: '60%',
-		minWidth: 333,
-		borderRadius: 12,
-		backgroundColor: '#23232300',
+		width: '100%',
+		height: '100%',
+		// minWidth: 333,
+		// borderRadius: 12,
+		backgroundColor: '#23232370',
 		fontFamily: 'sequel_sanssemi_bold_body, roboto',
 		fontWeight: '800',
-		fontSize: '12vw',
-		whiteSpace: 'pre-wrap',
+		fontSize: '3vw',
+		// whiteSpace: 'pre-wrap',
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexWrap: 'wrap',
+	},
+	text: {
+		textAlign: 'center',
+		textShadow: '-1px -1px 0 #000000,  1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000',
 	},
 }));
 
 export default () => {
 	const classes = useStyles();
 	const fullProps = useSpring({
-		from: { opacity: 0, transform: 'translate3d(-50px, 0, 0)' },
-		to: { opacity: 0.3, transform: 'translate3d(0, 0, 0)' },
-	});
-	const stackProps = useSpring({
-		from: { opacity: 0, transform: 'translate3d(50px, 0, 0)' },
-		to: { opacity: 0.3, transform: 'translate3d(0, 0, 0)' },
-		delay: 150,
-	});
-	const softwareProps = useSpring({
 		from: { opacity: 0, transform: 'translate3d(0, 50px, 0)' },
 		to: { opacity: 0.3, transform: 'translate3d(0, 0, 0)' },
-		delay: 300,
+		delay: 200,
+	});
+	const stackProps = useSpring({
+		from: { opacity: 0, transform: 'translate3d(0, 50px, 0)' },
+		to: { opacity: 0.3, transform: 'translate3d(0, 0, 0)' },
+		delay: 400,
+	});
+	const softwareProps = useSpring({
+		from: { opacity: 0, transform: 'translate3d(0, -50px, 0)' },
+		to: { opacity: 0.3, transform: 'translate3d(0, 0, 0)' },
+		delay: 600,
 	});
 	const developmentProps = useSpring({
 		from: { opacity: 0, transform: 'translate3d(0, 50px, 0)' },
@@ -46,10 +51,12 @@ export default () => {
 	return (
 		<React.Fragment>
 			<Container className={classes.container}>
-				<animated.div style={fullProps}>FULL </animated.div>
-				<animated.div style={stackProps}>STACK</animated.div>
-				<animated.div style={softwareProps}>SOFTWARE</animated.div>
-				<animated.div style={developmentProps}>DEVELOPMENT</animated.div>
+				<div className={classes.text}>
+					<animated.div style={fullProps}>Timothy Lee Long</animated.div>
+					<animated.div style={stackProps}>FULL STACK</animated.div>
+					<animated.div style={softwareProps}>SOFTWARE ENGINEER</animated.div>
+					{/* <animated.div style={developmentProps}>ENGINEER</animated.div> */}
+				</div>
 			</Container>
 		</React.Fragment>
 	);

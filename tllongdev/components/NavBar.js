@@ -10,6 +10,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import InfoIcon from '@material-ui/icons/Info';
 import WorkIcon from '@material-ui/icons/Work';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import Avatar from '@material-ui/core/Avatar';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
@@ -25,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 	navBar: {
 		backgroundColor: '#23232350',
 		color: '#ededed',
-		// height: 64,
+		// height: 5,
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
@@ -103,13 +106,13 @@ export default function NavBar({ parRef, handleScroll }) {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem onClick={() => (handleScroll(1), handleMenuClose())}>
+			<MenuItem onClick={() => (handleScroll(0.5), handleMenuClose())}>
 				<IconButton aria-label='contact' color='inherit'>
 					<InfoIcon />
 				</IconButton>
-				<p>info</p>
+				<p>about</p>
 			</MenuItem>
-			<MenuItem onClick={() => (handleScroll(1.5), handleMenuClose())}>
+			<MenuItem onClick={() => (handleScroll(1), handleMenuClose())}>
 				<IconButton aria-label='featured projects' color='inherit'>
 					<Badge badgeContent={4} color='secondary'>
 						<WorkIcon />
@@ -117,11 +120,26 @@ export default function NavBar({ parRef, handleScroll }) {
 				</IconButton>
 				<p>projects</p>
 			</MenuItem>
-			<MenuItem onClick={() => (handleScroll(2), handleMenuClose())}>
-				<IconButton aria-label='contact' color='inherit'>
-					<AlternateEmailIcon />
+			<MenuItem onClick={() => handleMenuClose()}>
+				<IconButton href='https://github.com/tllongdev' target='_blank'>
+					<GitHubIcon />
 				</IconButton>
-				<p>contact</p>
+				<p>Github</p>
+			</MenuItem>
+			<MenuItem onClick={() => handleMenuClose()}>
+				<IconButton href='https://www.linkedin.com/in/timothyleelong/' target='_blank'>
+					<LinkedInIcon />
+				</IconButton>
+				<p>Linkedin</p>
+			</MenuItem>
+			<MenuItem onClick={() => handleMenuClose()}>
+				<IconButton
+					href='mailto:tllongdev@gmail.com?subject=Reaching Out From Your Website (tllong.dev)&body=Hi, Tim'
+					target='_blank'
+				>
+					<EmailIcon />
+				</IconButton>
+				<p>tllongdev@gmail.com</p>
 			</MenuItem>
 			{/* <MenuItem onClick={handleProfileMenuOpen}>
 				<Avatar
@@ -152,29 +170,37 @@ export default function NavBar({ parRef, handleScroll }) {
 					<AppBar position='fixed' className={classes.navBar}>
 						<Toolbar>
 							<MenuItem style={{ padding: 0, borderRadius: 3 }} onClick={() => handleScroll(0)}>
-								<TllongdevLogoWht style={{ height: 44, width: 'auto' }} />
+								<TllongdevLogoWht style={{ height: 33, width: 'auto' }} />
 							</MenuItem>
 							<div className={classes.grow} />
 							<div className={classes.sectionDesktop}>
-								<MenuItem label='about' onClick={() => handleScroll(1)}>
-									<IconButton aria-label='contact' color='inherit'>
+								<MenuItem label='about' onClick={() => handleScroll(0.5)}>
+									{/* <IconButton aria-label='contact' color='inherit'>
 										<InfoIcon />
-									</IconButton>
-									<p>info</p>
+									</IconButton> */}
+									<p>about</p>
 								</MenuItem>
-								<MenuItem onClick={() => handleScroll(1.5)}>
-									<IconButton aria-label='featured projects' color='inherit'>
+								<MenuItem onClick={() => handleScroll(1)}>
+									{/* <IconButton aria-label='featured projects' color='inherit'>
 										<Badge badgeContent={4} color='secondary'>
 											<WorkIcon />
 										</Badge>
-									</IconButton>
+									</IconButton> */}
 									<p>projects</p>
 								</MenuItem>
-								<MenuItem onClick={() => handleScroll(2)}>
-									<IconButton aria-label='show 11 new notifications' color='inherit'>
-										<AlternateEmailIcon />
+								<MenuItem onClick={() => handleMenuClose()}>
+									<IconButton href='https://github.com/tllongdev' target='_blank'>
+										<GitHubIcon />
 									</IconButton>
-									<p>contact</p>
+									<IconButton href='https://www.linkedin.com/in/timothyleelong/' target='_blank'>
+										<LinkedInIcon />
+									</IconButton>
+									<IconButton
+										href='mailto:tllongdev@gmail.com?subject=Reaching Out From Your Website (tllong.dev)&body=Hi, Tim'
+										target='_blank'
+									>
+										<EmailIcon />
+									</IconButton>
 								</MenuItem>
 								{/* <MenuItem>
 									<Avatar
