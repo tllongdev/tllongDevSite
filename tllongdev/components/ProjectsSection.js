@@ -38,8 +38,8 @@ let projects = [
 		shortDescription: 'Returns a Home Depot store map with the most efficient shopping route plotted',
 		description:
 			"MERTH === Most Efficient Route Through HomeDepot... lol what?! Hear me out..:) Many stores now offer same day in-store pickup. Meaning a store employee will go get the items for you. This app aims at making that person's job as efficient as possible! After requesting access to APIs of major shopping chains with no luck, I chose Home Depot because all of the data I needed for a proof-of-concept is available via their mobile website. Given an online cart with items available at a chosen store location, MERTH deploys a headless Chrome web browser to scrape the data, then applies a Traveling Salesman heuristic, finally returns an svg store map with the most efficient route to obtain all items.",
-		mediaType: 'video',
-		media: './MERTHdemo2.mp4',
+		mediaType: 'image',
+		media: './MERTHscrnShot.png',
 		links: [
 			{ type: 'GitHub', link: 'https://github.com/tllongdev/MERTH' },
 			{ type: 'YouTube', link: 'https://youtu.be/comTb7gfHAw' },
