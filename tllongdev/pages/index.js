@@ -106,7 +106,7 @@ export default function Home() {
 				</ParallaxLayer> */}
 
 				<ParallaxLayer offset={0} speed={1}>
-					<VideoContainer video={video1} />
+					<VideoContainer video={video1} image={'./AIvideoFrame0.png'} />
 				</ParallaxLayer>
 
 				<ParallaxLayer offset={0.01} speed={0.1}>
