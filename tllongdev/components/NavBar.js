@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
+import Link from '@material-ui/core/Link';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
@@ -114,33 +115,40 @@ export default function NavBar({ parRef, handleScroll }) {
 			</MenuItem>
 			<MenuItem onClick={() => (handleScroll(1), handleMenuClose())}>
 				<IconButton aria-label='featured projects' color='inherit'>
-					<Badge badgeContent={4} color='secondary'>
+					{/* <Badge badgeContent={4} color='secondary'> */}
 						<WorkIcon />
-					</Badge>
+					{/* </Badge> */}
 				</IconButton>
 				<p>projects</p>
 			</MenuItem>
-			<MenuItem onClick={() => handleMenuClose()}>
-				<IconButton href='https://github.com/tllongdev' target='_blank'>
-					<GitHubIcon />
-				</IconButton>
-				<p>Github</p>
-			</MenuItem>
-			<MenuItem onClick={() => handleMenuClose()}>
-				<IconButton href='https://www.linkedin.com/in/timothyleelong/' target='_blank'>
-					<LinkedInIcon />
-				</IconButton>
-				<p>Linkedin</p>
-			</MenuItem>
-			<MenuItem onClick={() => handleMenuClose()}>
-				<IconButton
-					href='mailto:tllongdev@gmail.com?subject=Reaching Out From Your Website (tllong.dev)&body=Hi, Tim'
-					target='_blank'
-				>
-					<EmailIcon />
-				</IconButton>
-				<p>tllongdev@gmail.com</p>
-			</MenuItem>
+			<Link href='https://github.com/tllongdev' target='_blank' color='inherit'>
+				<MenuItem onClick={() => handleMenuClose()}>
+					<IconButton>
+						<GitHubIcon />
+					</IconButton>
+					<p>Github</p>
+				</MenuItem>
+			</Link>
+			<Link href='https://www.linkedin.com/in/timothyleelong/' target='_blank' color='inherit'>
+				<MenuItem onClick={() => handleMenuClose()}>
+					<IconButton>
+						<LinkedInIcon />
+					</IconButton>
+					<p>Linkedin</p>
+				</MenuItem>
+			</Link>
+			<Link
+				href='mailto:tllongdev@gmail.com?subject=Reaching Out From Your Website (tllong.dev)&body=Hi, Tim'
+				target='_blank'
+				color='inherit'
+			>
+				<MenuItem onClick={() => handleMenuClose()}>
+					<IconButton>
+						<EmailIcon />
+					</IconButton>
+					<p>tllongdev@gmail.com</p>
+				</MenuItem>
+			</Link>
 			{/* <MenuItem onClick={handleProfileMenuOpen}>
 				<Avatar
 					aria-label='account of current user'

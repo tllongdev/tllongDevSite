@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 		borderRadius: 16,
 		// opacity: 0.9,
 		minHeight: 151,
-		minWidth: 345,
+		minWidth: 300,
 		maxWidth: 444,
 		margin: '.5%',
 	},
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 		// borderRadius: 10,
 		// overflow: 'hidden',
 		height: '100%',
-		minWidth: 222,
+		minWidth: 180,
 	},
 	content: {
 		backgroundColor: '#23232300',

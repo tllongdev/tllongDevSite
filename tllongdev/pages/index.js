@@ -109,21 +109,21 @@ export default function Home() {
 					<VideoContainer video={video1} />
 				</ParallaxLayer>
 
-				<ParallaxLayer offset={0.02} speed={0.1}>
+				<ParallaxLayer offset={0.01} speed={0.1}>
 					<ParallaxLayer offset={0} speed={0.2} horizontal>
 						<h1 style={{ color: '#df9687', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '16vw' }}>
 							TIMOTHY
 						</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.1} speed={0.4}>
+				<ParallaxLayer offset={0.09} speed={0.4}>
 					<ParallaxLayer offset={0.1} speed={-0.7} horizontal>
 						<h1 style={{ color: '#5dbaa8', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '16vw' }}>
 							LEE
 						</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.18} speed={0.8}>
+				<ParallaxLayer offset={0.17} speed={0.8}>
 					<ParallaxLayer offset={0.2} speed={0.9} horizontal>
 						<h1 style={{ color: '#fdfc74', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '16vw' }}>
 							LONG
@@ -132,19 +132,19 @@ export default function Home() {
 				</ParallaxLayer>
 				<ParallaxLayer offset={0.48} speed={0.6}>
 					<ParallaxLayer offset={0.185} speed={0.9} horizontal>
-						<h1 style={{ color: '#5dbaa8', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '10vw' }}>
+						<h1 style={{ color: '#5dbaa8', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '10vw', width: '100vw' }}>
 							FULL STACK
 						</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.6} speed={0.8}>
+				<ParallaxLayer offset={0.6} speed={1.0}>
 					<ParallaxLayer offset={0.19} speed={-0.5} horizontal>
 						<h1 style={{ color: '#ededed', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '10vw' }}>
 							SOFTWARE
 						</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.72} speed={1}>
+				<ParallaxLayer offset={0.72} speed={1.2}>
 					<ParallaxLayer offset={0.2} speed={0.9} horizontal>
 						<h1 style={{ color: '#df9687', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '10vw' }}>
 							ENGINEER
