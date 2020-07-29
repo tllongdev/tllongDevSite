@@ -16,7 +16,7 @@ export default ({ mediaType, media }) => {
 			{mediaType === 'image' ? (
 				<img className={classes.media} src={media} alt='' />
 			) : (
-				<video autoPlay='autoplay' loop='loop' muted className={classes.media}>
+				<video autoPlay='autoplay' loop='loop' muted className={classes.media} preload='auto' async>
 					<source src={media} type='video/mp4' async />
 				</video>
 			)}

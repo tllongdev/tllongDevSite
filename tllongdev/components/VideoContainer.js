@@ -30,8 +30,8 @@ export default ({ video }) => {
 		<React.Fragment>
 			<Fade in={true} timeout={50}>
 				<Container className={classes.container}>
-					<video autoPlay='autoplay' loop='loop' muted className={classes.video}>
-						<source src={video} type='video/mp4' />
+					<video autoPlay='autoplay' loop='loop' muted className={classes.video} preload='auto' async>
+						<source src={video} type='video/mp4' async />
 					</video>
 					{/* <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} /> */}
 				</Container>
