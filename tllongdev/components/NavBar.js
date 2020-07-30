@@ -20,6 +20,7 @@ import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import Grow from '@material-ui/core/Grow';
 import TllongdevLogoWht from '../public/tllongdevLogoWht.svg';
+import TllLogo from '../public/tll.svg';
 import Vercel from '../public/vercel.svg';
 
 const useStyles = makeStyles(theme => ({
@@ -27,9 +28,16 @@ const useStyles = makeStyles(theme => ({
 		flexGrow: 1,
 	},
 	navBar: {
-		backgroundColor: '#23232350',
+		backgroundColor: '#23232390',
 		color: '#ededed',
+		textAlign: 'center',
+
 		// height: 5,
+	},
+	toolBar: {
+		maxWidth: 1048,
+		width: '100%',
+		margin: '0 auto',
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
@@ -116,7 +124,7 @@ export default function NavBar({ parRef, handleScroll }) {
 			<MenuItem onClick={() => (handleScroll(1), handleMenuClose())}>
 				<IconButton aria-label='featured projects' color='inherit'>
 					{/* <Badge badgeContent={4} color='secondary'> */}
-						<WorkIcon />
+					<WorkIcon />
 					{/* </Badge> */}
 				</IconButton>
 				<p>projects</p>
@@ -176,9 +184,9 @@ export default function NavBar({ parRef, handleScroll }) {
 			>
 				<div className={classes.grow}>
 					<AppBar position='fixed' className={classes.navBar}>
-						<Toolbar>
-							<MenuItem style={{ padding: 0, borderRadius: 3 }} onClick={() => handleScroll(0)}>
-								<TllongdevLogoWht style={{ height: 33, width: 'auto' }} />
+						<Toolbar className={classes.toolBar}>
+							<MenuItem onClick={() => handleScroll(0)}>
+								<TllLogo style={{ height: 33, width: 'auto' }} />
 							</MenuItem>
 							<div className={classes.grow} />
 							<div className={classes.sectionDesktop}>
@@ -186,7 +194,7 @@ export default function NavBar({ parRef, handleScroll }) {
 									{/* <IconButton aria-label='contact' color='inherit'>
 										<InfoIcon />
 									</IconButton> */}
-									<p>about</p>
+									<p style={{ fontWeight: 600 }}>intro</p>
 								</MenuItem>
 								<MenuItem onClick={() => handleScroll(1)}>
 									{/* <IconButton aria-label='featured projects' color='inherit'>
@@ -194,7 +202,7 @@ export default function NavBar({ parRef, handleScroll }) {
 											<WorkIcon />
 										</Badge>
 									</IconButton> */}
-									<p>projects</p>
+									<p style={{ fontWeight: 600 }}>projects</p>
 								</MenuItem>
 								<MenuItem onClick={() => handleMenuClose()}>
 									<IconButton href='https://github.com/tllongdev' target='_blank'>

@@ -2,7 +2,8 @@ import React, { useRef, useState } from 'react';
 import Iframe from 'react-iframe';
 import { makeStyles } from '@material-ui/core/styles';
 
-const gitProfileImage = './tllongdevGithubProfileImage.jpeg';
+// const gitProfileImage = './tllongdevGithubProfileImage.jpeg';
+const gitProfileImage = 'https://github.com/tllongdev.png';
 
 const useStyles = makeStyles(theme => ({
 	terminalContainer: {
@@ -61,6 +62,7 @@ export default () => {
 					display='initial'
 					position='relative'
 					frameBorder='0'
+					async
 				/>
 			</div>
 		</>

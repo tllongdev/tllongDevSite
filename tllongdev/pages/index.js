@@ -43,7 +43,7 @@ export default function Home() {
 	return (
 		<>
 			<NavBar parRef={parRef} handleScroll={handleScroll} />
-			<Parallax pages={2} ref={parRef} style={{ position: 'fixed' }}>
+			<Parallax pages={2} scrolling={false} ref={parRef}>
 				{/* Video Sections */}
 
 				{/* <ParallaxLayer offset={1} speed={1}>
@@ -51,7 +51,7 @@ export default function Home() {
 				</ParallaxLayer> */}
 
 				<ParallaxLayer offset={0.99} speed={0.99} style={{ opacity: '10%' }}>
-					<VideoContainer video={video3} />
+					<VideoContainer />
 				</ParallaxLayer>
 
 				<ParallaxLayer offset={0} speed={-0.3} style={{ opacity: '90%' }}>
@@ -106,49 +106,50 @@ export default function Home() {
 				</ParallaxLayer> */}
 
 				<ParallaxLayer offset={0} speed={1}>
-					<VideoContainer video={video1} image={'./AIvideoFrame0.png'} />
+					<VideoContainer />
 				</ParallaxLayer>
+				{/* <ParallaxLayer offset={0} speed={1}>
+					<VideoContainer video={video1} image={'./AIvideoFrame0.png'} />
+				</ParallaxLayer> */}
 
-				<ParallaxLayer offset={0.01} speed={0.1}>
+				{/* <ParallaxLayer offset={0.01} speed={0.1}>
 					<ParallaxLayer offset={0} speed={0.2} horizontal>
-						<h1 style={{ color: '#df9687', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '16vw' }}>
-							TIMOTHY
-						</h1>
+						<h1 style={{ color: '#df9687', opacity: 0.6, fontSize: '16vw' }}>TIMOTHY</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
 				<ParallaxLayer offset={0.09} speed={0.4}>
 					<ParallaxLayer offset={0.1} speed={-0.7} horizontal>
-						<h1 style={{ color: '#5dbaa8', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '16vw' }}>
-							LEE
-						</h1>
+						<h1 style={{ color: '#5dbaa8', opacity: 0.6, fontSize: '16vw' }}>LEE</h1>
 					</ParallaxLayer>
-				</ParallaxLayer>
+				</ParallaxLayer> */}
 				<ParallaxLayer offset={0.17} speed={0.8}>
-					<ParallaxLayer offset={0.2} speed={0.9} horizontal>
-						<h1 style={{ color: '#fdfc74', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '16vw' }}>
-							LONG
-						</h1>
+					<ParallaxLayer offset={0} speed={0.9} horizontal>
+						<h1 style={{ color: '#fdfc74', opacity: 0.6, fontSize: '10vw', width: '100vw' }}>TIMOTHY LEE LONG</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
-				<ParallaxLayer offset={0.48} speed={0.6}>
+				{/* <ParallaxLayer offset={0.48} speed={0.6}>
 					<ParallaxLayer offset={0.185} speed={0.9} horizontal>
-						<h1 style={{ color: '#5dbaa8', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '10vw', width: '100vw' }}>
+						<h1
+							style={{
+								color: '#5dbaa8',
+								opacity: 0.6,
+								fontFamily: 'sequel_sanssemi_bold_body',
+								fontSize: '10vw',
+								width: '100vw',
+							}}
+						>
 							FULL STACK
 						</h1>
 					</ParallaxLayer>
-				</ParallaxLayer>
+				</ParallaxLayer> */}
 				<ParallaxLayer offset={0.6} speed={1.0}>
 					<ParallaxLayer offset={0.19} speed={-0.5} horizontal>
-						<h1 style={{ color: '#ededed', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '10vw' }}>
-							SOFTWARE
-						</h1>
+						<h1 style={{ color: '#ededed', opacity: 0.6, fontSize: '10vw' }}>SOFTWARE</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
 				<ParallaxLayer offset={0.72} speed={1.2}>
 					<ParallaxLayer offset={0.2} speed={0.9} horizontal>
-						<h1 style={{ color: '#df9687', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '10vw' }}>
-							ENGINEER
-						</h1>
+						<h1 style={{ color: '#df9687', opacity: 0.6, fontSize: '10vw' }}>ENGINEER</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
 
@@ -208,9 +209,7 @@ export default function Home() {
 
 				<ParallaxLayer offset={1} speed={0.9} style={{ zIndex: 0 }}>
 					<ParallaxLayer offset={0.6} speed={0.6} horizontal>
-						<h1 style={{ color: 'ededed', opacity: 0.6, fontFamily: 'sequel_sanssemi_bold_body', fontSize: '18vw' }}>
-							PROJECTS
-						</h1>
+						<h1 style={{ color: 'ededed', opacity: 0.6, fontSize: '18vw' }}>PROJECTS</h1>
 					</ParallaxLayer>
 				</ParallaxLayer>
 

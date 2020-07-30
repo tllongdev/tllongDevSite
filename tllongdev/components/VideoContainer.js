@@ -10,22 +10,20 @@ const useStyles = makeStyles(theme => ({
 		minHeight: '100vh',
 		maxHeight: '100vh',
 		overflow: 'hidden',
-		backgroundColor: '#000',
+		backgroundColor: '#232323',
 		padding: 0,
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
-		// zIndex: -1,
 	},
 	media: {
-		minWidth: '100%',
-		minHeight: '100vh',
+		minWidth: '0%',
+		minHeight: '0vh',
 	},
 }));
 
 export default ({ video, image }) => {
 	const classes = useStyles();
-	const [checked, setChecked] = React.useState(true);
 	const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
 
 	const updateMedia = () => {
@@ -43,7 +41,7 @@ export default ({ video, image }) => {
 				<Container className={classes.container}>
 					{isDesktop ? (
 						<video autoPlay='autoplay' loop='loop' muted className={classes.media} preload='auto' async>
-							<source src={video} type='video/mp4' async />
+							<source src={video} type='video/mp4' style={{ border: 'none' }} async />
 						</video>
 					) : (
 						<img src={image} alt='' className={classes.media} />
