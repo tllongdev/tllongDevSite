@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 		width: '100%',
 		display: 'flex',
 		flexDirection: 'column',
-		justifyContent: 'space-between',
+		justifyContent: 'flex-start',
 		flex: '1 1 0%',
 	},
 	top: {
@@ -67,9 +67,13 @@ const useStyles = makeStyles(theme => ({
 		padding: theme.spacing(0, 3),
 		display: 'flex',
 		alignItems: 'center',
+		justifyContent: 'flex-start',
 		borderTop: '1px solid #232323',
 		borderRadius: '0 0 8px 8px',
+		fontWeight: 500,
+		whiteSpace: 'nowrap',
 		overflow: 'none',
+		overflowX: 'auto',
 	},
 	mediaBox: {
 		display: 'flex',
@@ -154,9 +158,7 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 								</Typography>
 							</div>
 							<div className={classes.footer}>
-								<Typography variant='caption' style={{ fontWeight: 500, whiteSpace: 'nowrap', overflowX: 'auto' }}>
-									{technologies}
-								</Typography>
+								<Typography variant='caption'>{technologies}</Typography>
 							</div>
 						</div>
 					</div>
