@@ -184,7 +184,7 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 						</div>
 						<div className={classes.bottom}>
 							<div className={classes.middle}>
-								<Typography variant='body2' component='h4' style={{ fontWeight: 500 }}>
+								<Typography variant='body2' component='h4' style={{ fontWeight: 500, fontSize: 14 }}>
 									{shortDescription}
 								</Typography>
 							</div>
