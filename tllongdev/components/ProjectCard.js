@@ -74,6 +74,7 @@ const useStyles = makeStyles(theme => ({
 		whiteSpace: 'nowrap',
 		overflow: 'none',
 		overflowX: 'auto',
+		textAlign: 'left',
 	},
 	mediaBox: {
 		display: 'flex',
