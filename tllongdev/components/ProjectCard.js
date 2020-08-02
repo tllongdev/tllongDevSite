@@ -72,9 +72,11 @@ const useStyles = makeStyles(theme => ({
 		borderRadius: '0 0 8px 8px',
 		fontWeight: 500,
 		whiteSpace: 'nowrap',
-		overflow: 'none',
-		overflowX: 'auto',
+		overflow: 'scroll',
+		// overflowX: 'scroll',
 		textAlign: 'left',
+		overflowScrolling: 'touch',
+		WebkitOverflowScrolling: 'touch',
 	},
 	mediaBox: {
 		display: 'flex',
