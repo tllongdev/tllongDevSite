@@ -35,8 +35,8 @@ const useStyles = makeStyles(theme => ({
 	avatar: {
 		width: 'clamp(90px, min(((1vw + 1vh)/2)*13), 200px)',
 		height: 'clamp(90px, min(((1vw + 1vh)/2)*13), 200px)',
-		minWidth: 100,
-		minHeight: 100,
+		minWidth: 90,
+		minHeight: 90,
 		marginRight: theme.spacing(3),
 	},
 	name: {
