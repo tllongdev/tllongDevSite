@@ -108,39 +108,42 @@ export default function Header(props) {
 			<Box component='header' className={classes.header}>
 				<div className={classes.heading}>
 					<div className={classes.info}>
-						<Avatar alt='Timothy Lee Long' src={gitProfileImage} className={classes.avatar} />
-						<div className={classes.name}>
-							<div className={classes.title}>
-								<div className={classes.titleLeft}>
-									<Typography variant='h4' component='h4' className={classes.nameText}>
-										Timothy Lee Long
-									</Typography>
+						<div
+							style={{ display: 'flex', flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}
+						>
+							<Avatar alt='Timothy Lee Long' src={gitProfileImage} className={classes.avatar} />
+							<div className={classes.name}>
+								<div className={classes.title}>
+									<div className={classes.titleLeft}>
+										<Typography variant='h4' component='h4' className={classes.nameText}>
+											Timothy Lee Long
+										</Typography>
+									</div>
+									{/* <span className={classes.spacer} /> */}
 								</div>
-								{/* <span className={classes.spacer} /> */}
-							</div>
-							<div className={classes.dashboard}>
-								<div className={classes.details}>
-									<section>
-										<div className={classes.section}>
-											<div className={classes.jobTitle}>
-												<Chip label='Software Engineer' variant='outlined' size='small' />
+								<div className={classes.dashboard}>
+									<div className={classes.details}>
+										<section>
+											<div className={classes.section}>
+												<div className={classes.jobTitle}>
+													<Chip label='Software Engineer' variant='outlined' size='small' />
+												</div>
+												<p>
+													<Link
+														href='https://github.com/tllongdev'
+														target='_blank'
+														color='inherit'
+														className={classes.contactIcons}
+													>
+														<GitHubIcon style={{ fontSize: 14 }} />
+														<span style={{ marginLeft: 'calc(4.33333px)' }} />
+														<span style={{ fontWeight: 500 }}>tllongdev</span>
+													</Link>
+												</p>
 											</div>
-											<p>
-												<Link
-													href='https://github.com/tllongdev'
-													target='_blank'
-													color='inherit'
-													className={classes.contactIcons}
-												>
-													<GitHubIcon style={{ fontSize: 14 }} />
-													<span style={{ marginLeft: 'calc(4.33333px)' }} />
-													<span style={{ fontWeight: 500 }}>tllongdev</span>
-												</Link>
-											</p>
-										</div>
-									</section>
-								</div>
-								{/* <div className={classes.details}>
+										</section>
+									</div>
+									{/* <div className={classes.details}>
 									<section>
 										<div className={classes.section}>
 											<div style={{ background: 'transparent', maxWidth: 280, fontStyle: 'italic' }}>
@@ -149,6 +152,7 @@ export default function Header(props) {
 										</div>
 									</section>
 								</div> */}
+								</div>
 							</div>
 						</div>
 						<div className={classes.titleRight}>

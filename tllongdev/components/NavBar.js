@@ -34,6 +34,7 @@ const useStyles = makeStyles(theme => ({
 		maxWidth: 1048,
 		width: '100%',
 		margin: '0 auto',
+		backgroundColor: '#00000000 !important',
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
