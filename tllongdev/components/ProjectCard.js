@@ -15,39 +15,61 @@ import LinkIcon from '@material-ui/icons/Link';
 import ProjectMedia from './ProjectMedia';
 
 const useStyles = makeStyles(theme => ({
-	root: {
+	projectCard: {
+		minHeight: 204,
+		marginBottom: theme.spacing(6),
+		padding: 0,
+		borderRadius: 8,
 		display: 'flex',
-		backgroundColor: '#23232390',
-		// background: 'repeating-linear-gradient( #232323, #00000000 2px, #232323 3px, #232323 3px)',
-		// border: '6px solid #181818',
-		borderRadius: 16,
-		// opacity: 0.9,
-		minHeight: 151,
-		minWidth: 300,
-		maxWidth: 444,
-		margin: '.5%',
+		backgroundColor: '#000',
+		border: '1px solid #232323',
 	},
-	inner: {
+	container: {
 		display: 'flex',
-		backgroundColor: '#23232390',
+		flexDirection: 'column',
+		position: 'relative',
+		minWidth: '1px',
+		maxWidth: '100%',
+		flex: 1,
+		justifyContent: 'center',
+		alignItems: 'center',
 	},
-	details: {
-		display: 'flex',
-		// flexDirection: 'column',
-		backgroundColor: '#23232300',
-		// borderRadius: 10,
-		// overflow: 'hidden',
-		height: '100%',
-		minWidth: 180,
-	},
-	content: {
-		backgroundColor: '#23232300',
-		// flex: '1 0 auto',
+	info: {
+		width: '100%',
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
-		padding: '8px 10px !important',
-		// padding: 10,
+		flex: '1 1 0%',
+	},
+	top: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'space-between',
+		margin: theme.spacing(3),
+	},
+	bottom: {
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'space-between',
+		flex: '1 1 0%',
+	},
+	middle: {
+		marginTop: '0px',
+		display: 'flex',
+		justifyContent: 'space-between',
+		alignItems: 'flex-end',
+		margin: theme.spacing(3),
+	},
+	footer: {
+		flex: '1 1',
+		height: theme.spacing(3),
+		maxHeight: theme.spacing(6),
+		padding: theme.spacing(0, 3),
+		display: 'flex',
+		alignItems: 'center',
+		borderTop: '1px solid #232323',
+		borderRadius: '0 0 8px 8px',
+		overflow: 'hidden',
 	},
 	mediaBox: {
 		display: 'flex',
@@ -68,17 +90,19 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: '#23232390',
+		backgroundColor: '#12121290',
 		outline: 'none',
 		maxHeight: '100vh',
 	},
 	paper: {
-		maxWidth: '90%',
-		backgroundColor: '#23232390',
-		border: 'none',
-		boxShadow: theme.shadows[5],
+		maxWidth: '95vw',
+		maxHeight: '95vh',
+		backgroundColor: '#000',
+		border: '1px solid #232323',
+		borderRadius: 8,
 		padding: theme.spacing(2, 4, 3),
 		outline: 'none',
+		overflowY: 'scroll',
 	},
 	modalMediaBox: {
 		display: 'flex',
@@ -115,28 +139,30 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 
 	return (
 		<>
-			<Card className={classes.root} elevation={3}>
-				<CardActionArea
-					className={classes.inner}
-					onClick={(() => (document.body.style.position = 'fixed'), handleOpen)}
-				>
-					<div className={classes.details}>
-						<CardContent className={classes.content}>
-							<h2
-								style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)`, margin: '0px 0px' }}
-								id='transition-modal-title'
-							>
+			<Card className={classes.projectCard}>
+				<CardActionArea className={classes.container} onClick={handleOpen}>
+					<div className={classes.info}>
+						<div className={classes.top}>
+							<h3 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)`, fontWeight: 600, margin: '0px 0px' }}>
 								{title}
-							</h2>
-							<Typography variant='body2'>{shortDescription}</Typography>
-							<Typography variant='caption' color='textSecondary'>
-								{technologies}
-							</Typography>
-						</CardContent>
+							</h3>
+						</div>
+						<div className={classes.bottom}>
+							<div className={classes.middle}>
+								<Typography variant='body2' style={{ fontWeight: 500 }}>
+									{shortDescription}
+								</Typography>
+							</div>
+							<div className={classes.footer}>
+								<Typography variant='caption' style={{ fontWeight: 500, whiteSpace: 'nowrap', overflowX: 'scroll' }}>
+									{technologies}
+								</Typography>
+							</div>
+						</div>
 					</div>
-					<div className={classes.mediaBox}>
+					{/* <div className={classes.mediaBox}>
 						<ProjectMedia mediaType={mediaType} media={media} />
-					</div>
+					</div> */}
 				</CardActionArea>
 			</Card>
 			{/* modal */}
@@ -154,24 +180,32 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 					}}
 				>
 					<Fade in={open}>
-						<div className={classes.paper} onClick={handleClose}>
-							<div className={classes.modalMediaBox}>
-								<ProjectMedia mediaType={mediaType} media={media} />
+						<div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', outline: 'none' }}>
+							<div className={classes.paper} onClick={handleClose}>
+								<div className={classes.modalMediaBox}>
+									<ProjectMedia mediaType={mediaType} media={media} />
+								</div>
+								<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }} id='transition-modal-title'>
+									{title}{' '}
+									{links.map((link, key) => (
+										<IconButton key={key} href={link.link} target='_blank'>
+											{link.type === 'GitHub' ? (
+												<GitHubIcon />
+											) : link.type === 'YouTube' ? (
+												<YouTubeIcon />
+											) : (
+												<LinkIcon />
+											)}
+										</IconButton>
+									))}
+								</h2>
+								<p style={{ fontSize: `clamp(11.5px,min(((1vw + 1vh)/2)*2), 16px)` }} id='transition-modal-description'>
+									{description}
+								</p>
+								<p style={{ fontSize: `clamp(11px,min(((1vw + 1vh)/2)*2), 13px)` }} id='transition-modal-description'>
+									Technologies: {technologies}
+								</p>
 							</div>
-							<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }} id='transition-modal-title'>
-								{title}{' '}
-								{links.map((link, key) => (
-									<IconButton key={key} href={link.link} target='_blank'>
-										{link.type === 'GitHub' ? <GitHubIcon /> : link.type === 'YouTube' ? <YouTubeIcon /> : <LinkIcon />}
-									</IconButton>
-								))}
-							</h2>
-							<p style={{ fontSize: `clamp(11.5px,min(((1vw + 1vh)/2)*2), 16px)` }} id='transition-modal-description'>
-								{description}
-							</p>
-							<p style={{ fontSize: `clamp(11px,min(((1vw + 1vh)/2)*2), 13px)` }} id='transition-modal-description'>
-								Technologies: {technologies}
-							</p>
 						</div>
 					</Fade>
 				</Modal>

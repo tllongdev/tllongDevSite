@@ -2,6 +2,15 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 // Create a theme instance.
 const theme = createMuiTheme({
+	// breakpoints: {
+	// 	values: {
+	// 		xs: 0,
+	// 		sm: 320,
+	// 		md: 768,
+	// 		lg: 1048,
+	// 		xl: 1366,
+	// 	},
+	// },
 	palette: {
 		type: 'dark',
 		primary: {
@@ -76,6 +85,17 @@ const theme = createMuiTheme({
 				marginLeft: 4,
 				marginRight: 4,
 				padding: 12,
+			},
+		},
+		MuiPaper: {
+			root: {
+				backgroundColor: '#121212',
+			},
+		},
+		MuiList: {
+			padding: {
+				paddingTop: 0,
+				paddingBottom: 0,
 			},
 		},
 	},
