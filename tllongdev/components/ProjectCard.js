@@ -51,7 +51,8 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
-		flex: '1 1 0%',
+		flex: 1,
+		width: '100%',
 	},
 	middle: {
 		marginTop: '0px',
@@ -61,7 +62,7 @@ const useStyles = makeStyles(theme => ({
 		margin: theme.spacing(3),
 	},
 	footer: {
-		flex: '1 1',
+		flex: 1,
 		height: theme.spacing(3),
 		maxHeight: theme.spacing(6),
 		padding: theme.spacing(0, 3),
@@ -73,10 +74,19 @@ const useStyles = makeStyles(theme => ({
 		fontWeight: 500,
 		whiteSpace: 'nowrap',
 		overflow: 'scroll',
+		width: '100%',
 		// overflowX: 'scroll',
 		textAlign: 'left',
 		overflowScrolling: 'touch',
 		WebkitOverflowScrolling: 'touch',
+	},
+	footerText: {
+		[theme.breakpoints.down('md')]: {
+			overflow: 'none',
+			fontSize: 11,
+			whiteSpace: 'normal',
+			overflow: 'none',
+		},
 	},
 	mediaBox: {
 		display: 'flex',
@@ -156,12 +166,14 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 						</div>
 						<div className={classes.bottom}>
 							<div className={classes.middle}>
-								<Typography variant='body2' style={{ fontWeight: 500 }}>
+								<Typography variant='body2' component='h4' style={{ fontWeight: 500 }}>
 									{shortDescription}
 								</Typography>
 							</div>
 							<div className={classes.footer}>
-								<Typography variant='caption'>{technologies}</Typography>
+								<Typography variant='caption' component='h4' className={classes.footerText}>
+									{technologies}
+								</Typography>
 							</div>
 						</div>
 					</div>
