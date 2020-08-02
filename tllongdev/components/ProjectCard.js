@@ -30,26 +30,35 @@ const useStyles = makeStyles(theme => ({
 		position: 'relative',
 		minWidth: '1px',
 		maxWidth: '100%',
-		flex: 1,
-		justifyContent: 'flex-start',
+		flex: '1 1',
+		justifyContent: 'center',
 		alignItems: 'center',
 	},
 	info: {
-		width: '100%',
+		minWidth: '100%',
 		display: 'flex',
 		flexDirection: 'column',
-		justifyContent: 'flex-start',
+		WebkitBoxPack: 'justify',
+		justifyContent: 'space-between',
 		flex: '1 1 0%',
+		position: 'absolute',
+		top: 0,
+		right: 0,
+		bottom: 0,
+		left: 0,
 	},
 	top: {
 		display: 'flex',
+		WebkitBoxAlign: 'center',
 		alignItems: 'center',
+		WebkitBoxPack: 'justify',
 		justifyContent: 'space-between',
 		margin: theme.spacing(3),
 	},
 	bottom: {
 		display: 'flex',
 		flexDirection: 'column',
+		WebkitBoxPack: 'justify',
 		justifyContent: 'space-between',
 		flex: 1,
 		width: '100%',
@@ -57,25 +66,33 @@ const useStyles = makeStyles(theme => ({
 	middle: {
 		marginTop: '0px',
 		display: 'flex',
+		WebkitBoxPack: 'justify',
 		justifyContent: 'space-between',
 		alignItems: 'flex-end',
 		margin: theme.spacing(3),
 	},
+	footerWrapper: {
+		color: 'inherit',
+		display: 'inline-flex',
+		WebkitBoxPack: 'center',
+		alignItems: 'center',
+		textDecoration: 'none',
+	},
 	footer: {
-		flex: 1,
+		flex: '1 1',
 		height: theme.spacing(3),
 		maxHeight: theme.spacing(6),
 		padding: theme.spacing(0, 3),
 		display: 'flex',
 		alignItems: 'center',
-		justifyContent: 'flex-start',
+		// justifyContent: 'flex-start',
 		borderTop: '1px solid #232323',
 		borderRadius: '0 0 8px 8px',
 		fontWeight: 500,
 		whiteSpace: 'nowrap',
-		overflow: 'scroll',
+		overflow: 'hidden',
 		width: '100%',
-		// overflowX: 'scroll',
+		overflowX: 'scroll',
 		textAlign: 'left',
 		overflowScrolling: 'touch',
 		WebkitOverflowScrolling: 'touch',
@@ -170,11 +187,13 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 									{shortDescription}
 								</Typography>
 							</div>
+							{/* <div className={classes.footerWrapper}> */}
 							<div className={classes.footer}>
 								<Typography variant='caption' component='h4' className={classes.footerText}>
 									{technologies}
 								</Typography>
 							</div>
+							{/* </div> */}
 						</div>
 					</div>
 					{/* <div className={classes.mediaBox}>
