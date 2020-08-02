@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 		minWidth: '1px',
 		maxWidth: '100%',
 		flex: 1,
-		justifyContent: 'center',
+		justifyContent: 'flex-start',
 		alignItems: 'center',
 	},
 	info: {
@@ -67,6 +67,7 @@ const useStyles = makeStyles(theme => ({
 		padding: theme.spacing(0, 3),
 		display: 'flex',
 		alignItems: 'center',
+		justifyContent: 'flex-start',
 		borderTop: '1px solid #232323',
 		borderRadius: '0 0 8px 8px',
 		overflow: 'hidden',
