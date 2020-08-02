@@ -129,7 +129,8 @@ const useStyles = makeStyles(theme => ({
 		maxHeight: '100vh',
 	},
 	paper: {
-		maxWidth: '95vw',
+		width: '95vw',
+		maxWidth: 1048,
 		maxHeight: '95vh',
 		backgroundColor: '#000',
 		border: '1px solid #232323',
