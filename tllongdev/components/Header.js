@@ -59,6 +59,9 @@ const useStyles = makeStyles(theme => ({
 	nameText: {
 		letterSpacing: '-.049375rem',
 		fontWeight: 600,
+		[theme.breakpoints.down('sm')]: {
+			fontSize: 29,
+		},
 	},
 	spacer: {
 		flex: 1,
@@ -72,6 +75,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	quote: {
 		maxWidth: 280,
+		minWidth: 200,
 		fontStyle: 'italic',
 		textShadow: '#00000080 1px 0 10px',
 		textAlign: 'center',
