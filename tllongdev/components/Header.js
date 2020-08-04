@@ -33,8 +33,8 @@ const useStyles = makeStyles(theme => ({
 		flexWrap: 'wrap',
 	},
 	avatar: {
-		width: 'clamp(90px, min(((1vw + 1vh)/2)*13), 200px)',
-		height: 'clamp(90px, min(((1vw + 1vh)/2)*13), 200px)',
+		width: 'clamp(90px, min(((1vw + 1vh)/2)*13), 180px)',
+		height: 'clamp(90px, min(((1vw + 1vh)/2)*13), 180px)',
 		minWidth: 90,
 		minHeight: 90,
 		marginRight: theme.spacing(3),
@@ -59,6 +59,7 @@ const useStyles = makeStyles(theme => ({
 	nameText: {
 		letterSpacing: '-.049375rem',
 		fontWeight: 600,
+		fontSize: 33,
 		[theme.breakpoints.down('sm')]: {
 			fontSize: 29,
 		},
