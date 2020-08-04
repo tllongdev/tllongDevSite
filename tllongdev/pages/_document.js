@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
 					{/* PWA primary color */}
 					<meta name='theme-color' content={theme.palette.primary.main} />
 
-					<meta name='og:title' content='Timothy Lee Long - Software Engineer ' />
+					<meta name='og:title' content='Timothy Lee Long - Software Engineer' />
 					<meta name='og:description' content=' Full Stack Software Engineering and Web Development' />
 					<meta name='og:image' content='https://tllong.dev/tll.svg' />
 					<meta name='og:url' content='https://tllong.dev' />

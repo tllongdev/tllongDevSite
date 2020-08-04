@@ -17,7 +17,8 @@ import Button from '@material-ui/core/Button';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import Grow from '@material-ui/core/Grow';
-import TllongdevLogoWht from '../public/tllongdevLogoWht.svg';
+// import TllongdevLogoWht from '../public/tllongdevLogoWht.svg';
+import TllongdevLogoWhtDot from '../public/tllongdevLogoWhtDot.svg';
 import TllLogo from '../public/tll.svg';
 
 const useStyles = makeStyles(theme => ({
@@ -242,7 +243,8 @@ export default function NavBar({ parRef, handleScroll }) {
 				<AppBar className={classes.navBar} ref={nav} elevation={0}>
 					<Toolbar className={classes.toolBar}>
 						{/* <MenuItem onClick={() => handleScroll(0)}> */}
-						<TllLogo style={{ height: 33, width: 'auto' }} />
+						{/* <TllLogo style={{ height: 33, width: 'auto' }} /> */}
+						<TllongdevLogoWhtDot style={{ height: 33, width: 'auto' }} />
 						{/* </MenuItem> */}
 						<div className={classes.grow} />
 						<div className={classes.sectionDesktop}>
