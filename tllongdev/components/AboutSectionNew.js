@@ -46,6 +46,24 @@ const knowledgeableIn = [
 	"Google Cloud API's",
 ];
 
+const otherInterests = [
+	'Musician',
+	'Multi-Instrumentalist',
+	'Audio Engineer',
+	'Traveling',
+	'Chess',
+	'History',
+	'Running',
+	'Cycling',
+	'Hiking',
+	'Long Range Target Shooting',
+	'Cat Dad', 
+	'Animal Lover', 
+	'Electrical Engineering',
+	'Alternative Energy',
+	'motorcycle and auto mechanics',
+];
+
 const continuingToLearn = ['Python', 'Ruby on Rails', 'GPT'];
 
 const useStyles = makeStyles(theme => ({
@@ -143,6 +161,27 @@ export default props => {
 									<div className={classes.aboutItemInnerChips}>
 										<span>
 											{continuingToLearn.map((e, key) => (
+												<Chip
+													key={key}
+													label={e}
+													variant='outlined'
+													size='small'
+													style={{ margin: 3, backgroundColor: '#00000080' }}
+												/>
+											))}
+										</span>
+									</div>
+								</div>
+							</div>
+							<hr className={classes.hr} />
+						</div>
+						<div className={classes.aboutItem}>
+							<div className={classes.aboutItemInner}>
+								<div className={classes.aboutItemInnerRow}>
+									<h4 className={classes.aboutItemInnerText}>Other Roles and Interests:</h4>
+									<div className={classes.aboutItemInnerChips}>
+										<span>
+											{otherInterests.map((e, key) => (
 												<Chip
 													key={key}
 													label={e}
