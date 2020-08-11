@@ -17,7 +17,7 @@ import Button from '@material-ui/core/Button';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import Grow from '@material-ui/core/Grow';
-// import TllongdevLogoWht from '../public/tllongdevLogoWht.svg';
+// import TllongdevLogoWhtDotOutlined from '../public/tllongdevLogoWhtDotOutlined.svg';
 import TllongdevLogoWhtDot from '../public/tllongdevLogoWhtDot.svg';
 import TllLogo from '../public/tll.svg';
 
@@ -244,6 +244,7 @@ export default function NavBar({ parRef, handleScroll }) {
 					<Toolbar className={classes.toolBar}>
 						{/* <MenuItem onClick={() => handleScroll(0)}> */}
 						{/* <TllLogo style={{ height: 33, width: 'auto' }} /> */}
+						{/* <TllongdevLogoWhtDotOutlined style={{ height: 33, width: 'auto' }} /> */}
 						<TllongdevLogoWhtDot style={{ height: 33, width: 'auto' }} />
 						{/* </MenuItem> */}
 						<div className={classes.grow} />

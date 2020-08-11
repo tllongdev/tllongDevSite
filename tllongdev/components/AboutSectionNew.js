@@ -57,11 +57,10 @@ const otherInterests = [
 	'Cycling',
 	'Hiking',
 	'Long Range Target Shooting',
-	'Cat Dad', 
-	'Animal Lover', 
+	'Cat Dad',
+	'Animal Lover',
 	'Electrical Engineering',
 	'Alternative Energy',
-	'motorcycle and auto mechanics',
 ];
 
 const continuingToLearn = ['Python', 'Ruby on Rails', 'GPT'];
