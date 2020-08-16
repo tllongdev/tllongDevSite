@@ -6,6 +6,7 @@ const useStyles = makeStyles(theme => ({
 	contentContainer: {
 		display: 'block',
 		borderTop: '1px solid #232323',
+		borderBottom: '1px solid #232323',
 	},
 	contentWrapper: {
 		maxWidth: '100%',
