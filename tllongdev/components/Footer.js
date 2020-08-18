@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		maxWidth: '100%',
 		margin: 'auto',
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('sm')]: {
 			justifyContent: 'center',
 		},
 	},
@@ -41,13 +41,16 @@ const useStyles = makeStyles(theme => ({
 		padding: theme.spacing(3, 0, 3),
 		[theme.breakpoints.down('md')]: {
 			flexWrap: 'wrap',
+		},
+		[theme.breakpoints.down('sm')]: {
+			flexWrap: 'wrap',
 			justifyContent: 'center',
 		},
 	},
 	footerCopyright: {
 		color: '#888',
 		fontSize: 14,
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('sm')]: {
 			order: 2,
 			flexBasis: '100%',
 			marginTop: 20,
@@ -55,7 +58,7 @@ const useStyles = makeStyles(theme => ({
 		},
 	},
 	footerContact: {
-		[theme.breakpoints.down('md')]: {
+		[theme.breakpoints.down('sm')]: {
 			order: 1,
 			marginLeft: 10,
 		},
