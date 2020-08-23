@@ -7,8 +7,10 @@ import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
+import Button from '@material-ui/core/Button';
 import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import LinkIcon from '@material-ui/icons/Link';
@@ -16,13 +18,13 @@ import ProjectMedia from './ProjectMedia';
 
 const useStyles = makeStyles(theme => ({
 	projectCard: {
-		minHeight: 204,
+		minHeight: 300,
 		marginBottom: theme.spacing(6),
 		padding: 0,
 		borderRadius: 8,
 		display: 'flex',
-		backgroundColor: '#000',
-		border: '1px solid #232323',
+		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
+		border: `1px solid ${theme.palette.divider}`,
 	},
 	container: {
 		display: 'flex',
@@ -54,6 +56,16 @@ const useStyles = makeStyles(theme => ({
 		WebkitBoxPack: 'justify',
 		justifyContent: 'space-between',
 		margin: theme.spacing(3),
+		[theme.breakpoints.down('xs')]: {
+			justifyContent: 'center',
+			flexWrap: 'wrap',
+		},
+	},
+	moreInfo: {
+		color: theme.palette.text.secondary,
+		[theme.breakpoints.down('xs')]: {
+			display: 'none',
+		},
 	},
 	bottom: {
 		display: 'flex',
@@ -80,13 +92,13 @@ const useStyles = makeStyles(theme => ({
 	},
 	footer: {
 		flex: '1 1',
-		height: theme.spacing(3),
+		// height: theme.spacing(3),
 		maxHeight: theme.spacing(6),
 		padding: theme.spacing(0, 3),
 		display: 'flex',
 		alignItems: 'center',
 		// justifyContent: 'flex-start',
-		borderTop: '1px solid #232323',
+		borderTop: `1px solid ${theme.palette.divider}`,
 		borderRadius: '0 0 8px 8px',
 		fontWeight: 500,
 		whiteSpace: 'nowrap',
@@ -132,8 +144,8 @@ const useStyles = makeStyles(theme => ({
 		width: '95vw',
 		maxWidth: 1048,
 		maxHeight: '95vh',
-		backgroundColor: '#000',
-		border: '1px solid #232323',
+		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
+		border: `1px solid ${theme.palette.divider}`,
 		borderRadius: 8,
 		padding: theme.spacing(2, 4, 3),
 		outline: 'none',
@@ -143,7 +155,7 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		borderRadius: 12,
+		// borderRadius: 12,
 		overflow: 'hidden',
 		width: 'auto',
 		height: '50vh',
@@ -151,9 +163,18 @@ const useStyles = makeStyles(theme => ({
 		// maxHeight: '50vh',
 		// whiteSpace: 'no-wrap',
 	},
-	modalMedia: {
-		maxHeight: '100%',
-		maxWidth: '100%',
+	// modalMedia: {
+	// 	display: 'flex',
+	// 	alignItems: 'center',
+	// 	justifyContent: 'center',
+	// 	height: 'fit-content',
+	// 	maxHeight: 'fit-content',
+	// 	// width: 'fit-content',
+	// 	border: `8px solid ${theme.palette.divider}`,
+	// },
+	modalBackButton: {
+		color: theme.palette.text.secondary,
+		marginTop: 8,
 	},
 }));
 
@@ -174,13 +195,16 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 
 	return (
 		<>
-			<Card className={classes.projectCard}>
-				<CardActionArea className={classes.container} onClick={handleOpen}>
+			<Card className={classes.projectCard} elevation={6}>
+				<div className={classes.container} onClick={handleOpen}>
 					<div className={classes.info}>
 						<div className={classes.top}>
 							<h3 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)`, fontWeight: 600, margin: '0px 0px' }}>
-								{title}
+								" {title} "
 							</h3>
+							<Button variant='outlined' size='small' className={classes.moreInfo}>
+								more info
+							</Button>
 						</div>
 						<div className={classes.bottom}>
 							<div className={classes.middle}>
@@ -200,7 +224,7 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 					{/* <div className={classes.mediaBox}>
 						<ProjectMedia mediaType={mediaType} media={media} />
 					</div> */}
-				</CardActionArea>
+				</div>
 			</Card>
 			{/* modal */}
 			<div>
@@ -220,10 +244,12 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 						<div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', outline: 'none' }}>
 							<div className={classes.paper} onClick={handleClose}>
 								<div className={classes.modalMediaBox}>
-									<ProjectMedia mediaType={mediaType} media={media} />
+									{/* <div className={classes.modalMedia}> */}
+										<ProjectMedia mediaType={mediaType} media={media} />
+									{/* </div> */}
 								</div>
 								<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }} id='transition-modal-title'>
-									{title}{' '}
+									" {title} "{' '}
 									{links.map((link, key) => (
 										<IconButton key={key} href={link.link} target='_blank'>
 											{link.type === 'GitHub' ? (
@@ -236,12 +262,21 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 										</IconButton>
 									))}
 								</h2>
-								<p style={{ fontSize: `clamp(11.5px,min(((1vw + 1vh)/2)*2), 16px)` }} id='transition-modal-description'>
+								<p style={{ fontSize: `clamp(12.5px,min(((1vw + 1vh)/2)*2), 16px)` }} id='transition-modal-description'>
 									{description}
 								</p>
-								<p style={{ fontSize: `clamp(11px,min(((1vw + 1vh)/2)*2), 13px)` }} id='transition-modal-description'>
+								<p style={{ fontSize: `clamp(12px,min(((1vw + 1vh)/2)*2), 14px)` }} id='transition-modal-description'>
 									Technologies: {technologies}
 								</p>
+								<Button
+									variant='outlined'
+									size='small'
+									color='inherit'
+									startIcon={<ArrowBackIosIcon />}
+									className={classes.modalBackButton}
+								>
+									Back
+								</Button>
 							</div>
 						</div>
 					</Fade>

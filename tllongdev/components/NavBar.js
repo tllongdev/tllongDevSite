@@ -26,19 +26,24 @@ const useStyles = makeStyles(theme => ({
 		flexGrow: 1,
 	},
 	navBar: {
-		backgroundColor: '#00000090 !important',
-		color: '#ededed !important',
+		backgroundColor: theme.palette.type === 'light' ? '#fafafa90' : '#00000090',
+		color: theme.palette.type === 'dark' ? '#ededed' : '#121212',
+		// color: '#ededed !important',
 		backdropFilter: 'saturate(180%) blur(5px)',
-		borderBottom: '1px solid #232323',
+		borderBottom: `1px solid ${theme.palette.divider}`,
 	},
 	toolBar: {
 		maxWidth: 1048,
 		width: '100%',
 		margin: '0 auto',
-		backgroundColor: '#00000000 !important',
+		// backgroundColor: '#00000000 !important',
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
+		color: theme.palette.type === 'dark' ? '#ededed' : '#121212',
+	},
+	mobileMenuItem: {
+		backgroundColor: theme.palette.type === 'light' ? '#ededed' : '#121212',
 	},
 	title: {
 		display: 'none',
@@ -57,6 +62,9 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.up('md')]: {
 			display: 'none',
 		},
+	},
+	spacer: {
+		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
 	},
 }));
 
@@ -127,7 +135,6 @@ export default function NavBar({ parRef, handleScroll }) {
 			transformOrigin={{ vertical: 'top', horizontal: 'right' }}
 			open={isMenuOpen}
 			onClose={handleMenuClose}
-			// style={{ backgroundColor: '#000' }}
 		>
 			{/* <Link href='https://www.linkedin.com/in/timothyleelong/' target='_blank' color='inherit'>
 				<MenuItem onClick={() => handleMenuClose()}>
@@ -142,7 +149,7 @@ export default function NavBar({ parRef, handleScroll }) {
 				target='_blank'
 				color='inherit'
 			>
-				<MenuItem onClick={() => handleMenuClose()}>
+				<MenuItem onClick={() => handleMenuClose()} className={classes.mobileMenuItem}>
 					<EmailIcon style={{ paddingRight: 4 }} />
 					<p>tllongdev@gmail.com</p>
 				</MenuItem>
@@ -161,13 +168,13 @@ export default function NavBar({ parRef, handleScroll }) {
 			open={isMobileMenuOpen}
 			onClose={handleMobileMenuClose}
 		>
-			<MenuItem onClick={() => (scrollTarget('about'), handleMenuClose())}>
+			<MenuItem onClick={() => (scrollTarget('about'), handleMenuClose())} className={classes.mobileMenuItem}>
 				<IconButton aria-label='contact' color='inherit'>
 					<InfoIcon />
 				</IconButton>
 				<p>About</p>
 			</MenuItem>
-			<MenuItem onClick={() => (scrollTarget('projects'), handleMenuClose())}>
+			<MenuItem onClick={() => (scrollTarget('projects'), handleMenuClose())} className={classes.mobileMenuItem}>
 				<IconButton aria-label='featured projects' color='inherit'>
 					{/* <Badge badgeContent={4} color='secondary'> */}
 					<WorkIcon />
@@ -176,7 +183,7 @@ export default function NavBar({ parRef, handleScroll }) {
 				<p>Projects</p>
 			</MenuItem>
 			<Link href='https://github.com/tllongdev' target='_blank' color='inherit'>
-				<MenuItem onClick={() => handleMenuClose()}>
+				<MenuItem onClick={() => handleMenuClose()} className={classes.mobileMenuItem}>
 					<IconButton>
 						<GitHubIcon />
 					</IconButton>
@@ -184,7 +191,7 @@ export default function NavBar({ parRef, handleScroll }) {
 				</MenuItem>
 			</Link>
 			<Link href='https://www.linkedin.com/in/timothyleelong/' target='_blank' color='inherit'>
-				<MenuItem onClick={() => handleMenuClose()}>
+				<MenuItem onClick={() => handleMenuClose()} className={classes.mobileMenuItem}>
 					<IconButton>
 						<LinkedInIcon />
 					</IconButton>
@@ -196,7 +203,7 @@ export default function NavBar({ parRef, handleScroll }) {
 				target='_blank'
 				color='inherit'
 			>
-				<MenuItem onClick={() => handleMenuClose()}>
+				<MenuItem onClick={() => handleMenuClose()} className={classes.mobileMenuItem}>
 					<IconButton>
 						<EmailIcon />
 					</IconButton>
@@ -313,7 +320,7 @@ export default function NavBar({ parRef, handleScroll }) {
 				{renderMenu}
 			</div>
 			{/* </Grow> */}
-			<div style={{ paddingTop: `${navHeight}px`, backgroundColor: '#121212' }} />
+			<div style={{ paddingTop: `${navHeight}px` }} className={classes.spacer} />
 		</React.Fragment>
 	);
 }

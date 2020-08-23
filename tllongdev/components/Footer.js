@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
 import Link from '@material-ui/core/Link';
 import IconButton from '@material-ui/core/IconButton';
@@ -11,9 +11,9 @@ import TllongdevLogoWhtDot from '../public/tllongdevLogoWhtDot.svg';
 
 const useStyles = makeStyles(theme => ({
 	footer: {
-		backgroundColor: '#000000',
 		display: 'block',
 		padding: theme.spacing(3, 3),
+		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
 	},
 	footerContent: {
 		width: 1000,
@@ -78,7 +78,8 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default function Header(props) {
+export default function Footer(props) {
+	const theme = useTheme();
 	const classes = useStyles();
 
 	return (
@@ -92,7 +93,7 @@ export default function Header(props) {
 					</section>
 					<div className={classes.footerWrapper}>
 						<span className={classes.footerCopyright}>
-							<span>Copyright</span> © 2020 Timothy Lee Long All rights reserved.
+							<span>Copyright</span> © 2020 Timothy Lee Long. All rights reserved.
 						</span>
 						<div className={classes.footerContact}>
 							<ul className={classes.footerSocial}>

@@ -5,8 +5,8 @@ const theme = createMuiTheme({
 	breakpoints: {
 		values: {
 			xs: 0,
-			sm: 600,
-			md: 960,
+			sm: 420,
+			md: 900,
 			lg: 1280,
 			xl: 1920,
 		},
@@ -21,6 +21,11 @@ const theme = createMuiTheme({
 		},
 		warning: {
 			main: '#fdfc74',
+		},
+		contrast: {
+			light: '#ededed',
+			main: '#ededed',
+			dark: '#121212',
 		},
 	},
 	typography: {
@@ -87,11 +92,11 @@ const theme = createMuiTheme({
 				padding: 12,
 			},
 		},
-		MuiPaper: {
-			root: {
-				backgroundColor: '#121212',
-			},
-		},
+		// MuiPaper: {
+		// 	root: {
+		// 		backgroundColor: '#00000020',
+		// 	},
+		// },
 		MuiList: {
 			padding: {
 				paddingTop: 0,

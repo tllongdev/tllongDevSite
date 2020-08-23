@@ -12,7 +12,7 @@ const gitProfileImage = 'https://github.com/tllongdev.png';
 
 const useStyles = makeStyles(theme => ({
 	header: {
-		backgroundColor: '#121212',
+		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
 		display: 'flex',
 		flexDirection: 'column',
 		padding: theme.spacing(6, 0, 9),
@@ -35,9 +35,11 @@ const useStyles = makeStyles(theme => ({
 	avatar: {
 		width: 'clamp(90px, min(((1vw + 1vh)/2)*13), 180px)',
 		height: 'clamp(90px, min(((1vw + 1vh)/2)*13), 180px)',
-		minWidth: 90,
-		minHeight: 90,
+		minWidth: 93,
+		minHeight: 93,
 		marginRight: theme.spacing(3),
+		// boxShadow: theme.shadows[3],
+		border: `1px solid ${theme.palette.divider}`,
 	},
 	name: {
 		display: 'flex',
@@ -78,7 +80,7 @@ const useStyles = makeStyles(theme => ({
 		maxWidth: 280,
 		minWidth: 200,
 		fontStyle: 'italic',
-		textShadow: '#00000080 1px 0 10px',
+		textShadow: '#00000050 1px 0 3px',
 		textAlign: 'center',
 		padding: theme.spacing(2, 1, 0, 1),
 	},
@@ -163,7 +165,8 @@ export default function Header(props) {
 						<div className={classes.titleRight}>
 							{/* <Paper variant='outlined' className={classes.quote}> */}
 							<Typography variant='subtitle2' component='h3' className={classes.quote}>
-								" Hi. I'm Tim. I like to make things. Let's make something together. "
+								" Hi. I'm Tim, a Full Stack Developer building innovative custom websites and applications. Let's build
+								something together. "
 							</Typography>
 							{/* </Paper> */}
 						</div>

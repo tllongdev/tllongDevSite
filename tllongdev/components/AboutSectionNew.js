@@ -24,7 +24,7 @@ const wellVersedIn = [
 	'Agile (Scrum)',
 	'Next.js',
 	'Puppeteer.js',
-	'Kanban Boards',
+	// 'Kanban Boards',
 	'Mocha',
 	'Chai',
 	'Jasmine',
@@ -56,7 +56,7 @@ const otherInterests = [
 	'Running',
 	'Cycling',
 	'Hiking',
-	'Cat Dad',
+	// 'Cat Dad',
 	// 'Long Range Target Shooting',
 	'Electrical Engineering',
 	'Sustainable Energy',
@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	hr: {
 		borderWidth: 1,
-		borderColor: '#232323',
+		borderColor: `${theme.palette.divider}`,
 		margin: 0,
 	},
 }));
@@ -123,7 +123,7 @@ export default props => {
 													label={e}
 													variant='outlined'
 													size='small'
-													style={{ margin: 3, backgroundColor: '#00000080' }}
+													style={{ margin: 3, backgroundColor: '#00000020' }}
 												/>
 											))}
 										</span>
@@ -144,7 +144,7 @@ export default props => {
 													label={e}
 													variant='outlined'
 													size='small'
-													style={{ margin: 3, backgroundColor: '#00000080' }}
+													style={{ margin: 3, backgroundColor: '#00000020' }}
 												/>
 											))}
 										</span>
@@ -165,7 +165,7 @@ export default props => {
 													label={e}
 													variant='outlined'
 													size='small'
-													style={{ margin: 3, backgroundColor: '#00000080' }}
+													style={{ margin: 3, backgroundColor: '#00000020' }}
 												/>
 											))}
 										</span>
@@ -186,7 +186,7 @@ export default props => {
 													label={e}
 													variant='outlined'
 													size='small'
-													style={{ margin: 3, backgroundColor: '#00000080' }}
+													style={{ margin: 3, backgroundColor: '#00000020' }}
 												/>
 											))}
 										</span>

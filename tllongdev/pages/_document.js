@@ -1,7 +1,7 @@
 import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/core/styles';
-import theme from '../src/theme';
+// import theme from '../src/theme';
 
 export default class MyDocument extends Document {
 	render() {
@@ -9,7 +9,7 @@ export default class MyDocument extends Document {
 			<Html lang='en'>
 				<Head>
 					{/* PWA primary color */}
-					<meta name='theme-color' content={theme.palette.primary.main} />
+					{/* <meta name='theme-color' content={theme.palette.primary.main} /> */}
 
 					<meta property='og:type' content='website' />
 
@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
 					<meta name='twitter:title' content='Timothy Lee Long - Software Engineer ' />
 					<meta name='twitter:description' content='Full Stack Software Engineering and Web Development' />
 					<meta name='twitter:image' content='https://tllong.dev/tllong.devScreenShot2020-08-04.png' />
-					
+
 					<link
 						href='https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap'
 						rel='stylesheet'
@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
 
 					<link rel='stylesheet' href='./fonts/fonts.css' />
 				</Head>
-				<body style={{ overscrollBehaviorY: 'none', overscrollBehaviorX: 'none', backgroundColor: '#181818' }}>
+				<body style={{ overscrollBehaviorY: 'none', overscrollBehaviorX: 'none' }}>
 					<Main />
 					<NextScript />
 				</body>

@@ -5,8 +5,9 @@ import Box from '@material-ui/core/Box';
 const useStyles = makeStyles(theme => ({
 	contentContainer: {
 		display: 'block',
-		borderTop: '1px solid #232323',
-		borderBottom: '1px solid #232323',
+		backgroundColor: theme.palette.type === 'light' ? '#ededed' : '#121212',
+		borderTop: `1px solid ${theme.palette.divider}`,
+		borderBottom: `1px solid ${theme.palette.divider}`,
 	},
 	contentWrapper: {
 		maxWidth: '100%',
