@@ -24,7 +24,10 @@ const useStyles = makeStyles(theme => ({
 		borderRadius: 8,
 		display: 'flex',
 		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
-		border: `1px solid ${theme.palette.divider}`,
+		background: 'linear-gradient(#ffffff09, #00000000)',
+		border:
+			theme.palette.type === 'light' ? `1px solid ${theme.palette.text.primary}` : `1px solid ${theme.palette.divider}`,
+		cursor: 'pointer',
 	},
 	container: {
 		display: 'flex',
@@ -61,9 +64,39 @@ const useStyles = makeStyles(theme => ({
 			flexWrap: 'wrap',
 		},
 	},
-	moreInfo: {
-		color: theme.palette.text.secondary,
+	topLeft: {
+		display: 'flex',
+		flexDirection: 'column',
+		WebkitBoxAlign: 'center',
+		alignItems: 'left',
+		WebkitBoxPack: 'justify',
+		justifyContent: 'space-between',
+		margin: theme.spacing(0),
 		[theme.breakpoints.down('xs')]: {
+			justifyContent: 'center',
+			alignItems: 'center',
+			textAlign: 'center',
+		},
+	},
+	moreInfo: {
+		color: theme.palette.type === 'dark' ? '#ededed' : '#ffffff',
+		backgroundColor: '#000',
+		'&:hover': {
+			color: theme.palette.type === 'light' ? '#000000' : '#ffffff',
+			border: theme.palette.type === 'light' ? '1px solid #000' : '1px solid #ededed',
+		},
+		[theme.breakpoints.down('xs')]: {
+			display: 'none',
+		},
+	},
+	learnMore: {
+		color: theme.palette.type === 'dark' ? '#ededed' : '#ffffff',
+		backgroundColor: '#000',
+		'&:hover': {
+			color: theme.palette.type === 'light' ? '#000000' : '#ffffff',
+			border: theme.palette.type === 'light' ? '1px solid #000' : '1px solid #ededed',
+		},
+		[theme.breakpoints.up('xs')]: {
 			display: 'none',
 		},
 	},
@@ -98,7 +131,10 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		alignItems: 'center',
 		// justifyContent: 'flex-start',
-		borderTop: `1px solid ${theme.palette.divider}`,
+		borderTop:
+			theme.palette.type === 'light'
+				? `1px solid ${theme.palette.background.default}`
+				: `1px solid ${theme.palette.divider}`,
 		borderRadius: '0 0 8px 8px',
 		fontWeight: 500,
 		whiteSpace: 'nowrap',
@@ -110,6 +146,7 @@ const useStyles = makeStyles(theme => ({
 		WebkitOverflowScrolling: 'touch',
 	},
 	footerText: {
+		fontSize: 12.5,
 		[theme.breakpoints.down('md')]: {
 			overflow: 'none',
 			fontSize: 11,
@@ -139,13 +176,17 @@ const useStyles = makeStyles(theme => ({
 		backgroundColor: '#12121290',
 		outline: 'none',
 		maxHeight: '100vh',
+		cursor: 'pointer',
 	},
 	paper: {
 		width: '95vw',
 		maxWidth: 1048,
 		maxHeight: '95vh',
 		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
-		border: `1px solid ${theme.palette.divider}`,
+		border:
+			theme.palette.type === 'light'
+				? `1px solid ${theme.palette.text.primary}`
+				: `1px solid ${theme.palette.action.disabled}`,
 		borderRadius: 8,
 		padding: theme.spacing(2, 4, 3),
 		outline: 'none',
@@ -178,7 +219,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default ({ title, technologies, shortDescription, description, mediaType, media, links }) => {
+export default ({ title, headline, technologies, shortDescription, description, mediaType, media, links }) => {
 	const classes = useStyles();
 	const theme = useTheme();
 
@@ -199,9 +240,16 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 				<div className={classes.container} onClick={handleOpen}>
 					<div className={classes.info}>
 						<div className={classes.top}>
-							<h3 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)`, fontWeight: 600, margin: '0px 0px' }}>
-								" {title} "
-							</h3>
+							<div className={classes.topLeft}>
+								<h3
+									style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)`, fontWeight: 600, margin: '0px 0px' }}
+								>
+									" {title} "
+								</h3>
+								<Typography variant='body1' component='div' style={{ fontWeight: 700, fontSize: 12, marginTop: 6 }}>
+									{headline}
+								</Typography>
+							</div>
 							<Button variant='outlined' size='small' className={classes.moreInfo}>
 								more info
 							</Button>
@@ -245,7 +293,7 @@ export default ({ title, technologies, shortDescription, description, mediaType,
 							<div className={classes.paper} onClick={handleClose}>
 								<div className={classes.modalMediaBox}>
 									{/* <div className={classes.modalMedia}> */}
-										<ProjectMedia mediaType={mediaType} media={media} />
+									<ProjectMedia mediaType={mediaType} media={media} />
 									{/* </div> */}
 								</div>
 								<h2 style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)` }} id='transition-modal-title'>

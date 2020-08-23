@@ -14,6 +14,7 @@ const useStyles = makeStyles(theme => ({
 		display: 'block',
 		padding: theme.spacing(3, 3),
 		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
+		background: 'linear-gradient(#00000000, #00000010)',
 	},
 	footerContent: {
 		width: 1000,

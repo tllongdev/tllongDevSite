@@ -6,8 +6,11 @@ const useStyles = makeStyles(theme => ({
 	contentContainer: {
 		display: 'block',
 		backgroundColor: theme.palette.type === 'light' ? '#ededed' : '#121212',
-		borderTop: `1px solid ${theme.palette.divider}`,
-		borderBottom: `1px solid ${theme.palette.divider}`,
+		background: 'linear-gradient(#00000000, #00000010)',
+		borderTop:
+			theme.palette.type === 'light' ? `1px solid ${theme.palette.text.primary}` : `1px solid ${theme.palette.divider}`,
+		borderBottom:
+			theme.palette.type === 'light' ? `1px solid ${theme.palette.text.primary}` : `1px solid ${theme.palette.divider}`,
 	},
 	contentWrapper: {
 		maxWidth: '100%',

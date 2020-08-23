@@ -9,7 +9,7 @@ let projects = [
 		headline: 'Real-time Object Recognition and Language Translation',
 		technologies: 'Swift, CoreML, Google Translate API',
 		shortDescription:
-			"'Translate Object' is an iOS app utilizing machine learning and language translation to identify objects and translate them to any language of your choice.",
+			'Translate Object is an iOS app utilizing machine learning and language translation to identify objects and translate them to a language of your choice.',
 		description:
 			"'Translate Object' is an iOS app written in Swift that utilizes CoreML and the ResNet50 Convolutional Neural Network to identify objects in the mobile device's live camera feed in real-time. The name of the object is then translated to a foreign language of the user's choice in real-time via a Google Cloud Services API. The user can actively switch languages while using the app. The native language is set to the user's mobile device preference. \n\nThis application was created as my 'Hackathon' project at Fullstack Academy. It won the 'Nerd Cred' award for most technically challenging project.",
 		mediaType: 'video',
@@ -21,10 +21,10 @@ let projects = [
 	},
 	{
 		title: 'Le Magasin',
-		technologies: 'React, Redux, Postgres, Sequelize, Express, Node.js, OAuth',
+		technologies: 'React, Redux, PostgreSQL, Sequelize, Express, Node.js, OAuth',
 		headline: 'Full Stack eCommerce Website',
 		shortDescription:
-			"French for 'store', Le Magasin is a full stack eCommerce website built on the N.E.R.D. stack (Node.js, Express, React, and PostgreSQL).",
+			"French for 'The Store', Le Magasin is a full stack eCommerce website built on the N.E.R.D. stack (Node.js, Express, React, and Databases).",
 		description:
 			"French for 'store', Le Magasin is a full stack eCommerce website concept. I was one of four developers who created this project during our 10 day 'Stackathon' code sprint at Fullstack Academy. I was responsible for creating the cart, form validation, automated seed file creation, Postgres database schema in Sequelize, Express routes, Redux state management, the overall Bootstrap SASS styling, React components (all hooks), kanban board project management, and Mocha / Chai tests. ",
 		mediaType: 'video',
@@ -37,7 +37,7 @@ let projects = [
 	{
 		title: 'MERTH',
 		technologies: 'Puppeteer.js, Traveling Salesman Algorithm, Node.js',
-		headline: "Real-world Implementation of Web Scraping and a 'Traveling Salesman' Algorithm",
+		headline: 'Web Scraping / Traveling Salesman Algorithm',
 		shortDescription:
 			'MERTH takes a Home Depot online cart and a chosen Home Depot location, and gives you a store map with the most efficient shopping route plotted!',
 		description:
@@ -52,10 +52,10 @@ let projects = [
 
 	{
 		title: 'Crowd Meritocracy',
-		technologies: 'Redwood.js, React, Material UI, GraphQL, Apollo, Prisma, AWS Lambdas, Postgres',
-		headline: 'Crowd-sourced Algorithmic Group Decision Making App Built on the JAM Stack',
+		technologies: 'React, Material UI, Apollo, GraphQL, Prisma, AWS Lambdas, PostgreSQL',
+		headline: 'Crowd-sourced Algorithmic Decision Making',
 		shortDescription:
-			'Crowd Meritocracy gives your company or group a clear picture of which ideas are best in a radically transparent forum driven by user interaction and data-driven algorithms.',
+			'Crowd Meritocracy is an algorithmic group decision making application driven by user interaction in a radically transparent forum where the best ideas win.',
 		description:
 			"'Crowd Meritocracy' is an algorithmic group decision making web application created by myself and two other software engineers as our 'Capstone' project at Fullstack Academy. The app was inspired by the 'Dot Collector', a privately available application used at Bridgewater Associates. Users contribute issues, propose solutions and vote on others’ input in a radically transparent forum wherein algorithms drive a clear, data-driven visualization of which ideas are best (hold the most merit).",
 		mediaType: 'image',
@@ -74,6 +74,7 @@ export default () => {
 				<ProjectCard
 					key={key}
 					title={project.title}
+					headline={project.headline}
 					technologies={project.technologies}
 					shortDescription={project.shortDescription}
 					description={project.description}

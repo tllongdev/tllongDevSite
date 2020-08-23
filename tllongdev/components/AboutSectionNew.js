@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	hr: {
 		borderWidth: 1,
-		borderColor: `${theme.palette.divider}`,
+		borderColor: theme.palette.type === 'light' ? `${theme.palette.divider}` : `${theme.palette.divider}`,
 		margin: 0,
 	},
 }));

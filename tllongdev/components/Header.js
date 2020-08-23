@@ -13,6 +13,7 @@ const gitProfileImage = 'https://github.com/tllongdev.png';
 const useStyles = makeStyles(theme => ({
 	header: {
 		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
+		background: 'linear-gradient(#00000008, #00000000)',
 		display: 'flex',
 		flexDirection: 'column',
 		padding: theme.spacing(6, 0, 9),
@@ -38,8 +39,11 @@ const useStyles = makeStyles(theme => ({
 		minWidth: 93,
 		minHeight: 93,
 		marginRight: theme.spacing(3),
-		// boxShadow: theme.shadows[3],
-		border: `1px solid ${theme.palette.divider}`,
+		// boxShadow: theme.shadows[9],
+		border:
+			theme.palette.type === 'light'
+				? `1px solid ${theme.palette.text.primary}`
+				: `1px solid ${theme.palette.divider}`,
 	},
 	name: {
 		display: 'flex',
@@ -80,7 +84,7 @@ const useStyles = makeStyles(theme => ({
 		maxWidth: 280,
 		minWidth: 200,
 		fontStyle: 'italic',
-		textShadow: '#00000050 1px 0 3px',
+		textShadow: '#00000010 1px 0 3px',
 		textAlign: 'center',
 		padding: theme.spacing(2, 1, 0, 1),
 	},
@@ -101,6 +105,11 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		alignItems: 'center',
 	},
+	// jobTitleChip: {
+	// 	border:
+	// 		theme.palette.type === 'light' ? `1px solid ${theme.palette.text.primary}` : `1px solid ${theme.palette.divider}`,
+	// 	cursor: 'crosshair',
+	// },
 	contactIcons: {
 		display: 'flex',
 		alignItems: 'center',
@@ -133,7 +142,12 @@ export default function Header(props) {
 										<section>
 											<div className={classes.section}>
 												<div className={classes.jobTitle}>
-													<Chip label='Software Engineer' variant='outlined' size='small' />
+													<Chip
+														label='Software Engineer'
+														variant='outlined'
+														size='small'
+														className={classes.jobTitleChip}
+													/>
 												</div>
 												<p>
 													<Link

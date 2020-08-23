@@ -28,19 +28,26 @@ const useStyles = makeStyles(theme => ({
 	navBar: {
 		backgroundColor: theme.palette.type === 'light' ? '#fafafa90' : '#00000090',
 		color: theme.palette.type === 'dark' ? '#ededed' : '#121212',
-		// color: '#ededed !important',
 		backdropFilter: 'saturate(180%) blur(5px)',
-		borderBottom: `1px solid ${theme.palette.divider}`,
+		borderBottom:
+			theme.palette.type === 'light' ? `1px solid ${theme.palette.text.primary}` : `1px solid ${theme.palette.divider}`,
 	},
 	toolBar: {
 		maxWidth: 1048,
 		width: '100%',
 		margin: '0 auto',
-		// backgroundColor: '#00000000 !important',
 	},
 	menuButton: {
 		marginRight: theme.spacing(2),
 		color: theme.palette.type === 'dark' ? '#ededed' : '#121212',
+	},
+	contactButton: {
+		color: theme.palette.type === 'dark' ? '#ededed' : '#ffffff',
+		backgroundColor: '#000',
+		'&:hover': {
+			color: theme.palette.type === 'light' ? '#000000' : '#ffffff',
+			border: theme.palette.type === 'light' ? '1px solid #000' : '1px solid #ededed',
+		},
 	},
 	mobileMenuItem: {
 		backgroundColor: theme.palette.type === 'light' ? '#ededed' : '#121212',
@@ -286,21 +293,22 @@ export default function NavBar({ parRef, handleScroll }) {
 								</IconButton>
 							</div> */}
 							{/* </MenuItem> */}
-							<MenuItem>
-								<Button
-									variant='outlined'
-									size='small'
-									edge='end'
-									aria-label='account of current user'
-									aria-controls={menuId}
-									aria-haspopup='true'
-									onClick={handleProfileMenuOpen}
-									color='inherit'
-									// style={{ textTransform: 'none' }}
-								>
-									Contact
-								</Button>
-							</MenuItem>
+							{/* <MenuItem> */}
+							<Button
+								variant='outlined'
+								size='small'
+								edge='end'
+								aria-label='account of current user'
+								aria-controls={menuId}
+								aria-haspopup='true'
+								onClick={handleProfileMenuOpen}
+								className={classes.contactButton}
+								// color='inherit'
+								// style={{ textTransform: 'none' }}
+							>
+								Contact
+							</Button>
+							{/* </MenuItem> */}
 						</div>
 						<div className={classes.sectionMobile}>
 							<IconButton
