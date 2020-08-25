@@ -5,6 +5,8 @@ const useStyles = makeStyles(theme => ({
 	media: {
 		maxHeight: '100%',
 		maxWidth: '100%',
+		borderRadius: 3,
+		boxShadow: theme.shadows[3],
 	},
 }));
 

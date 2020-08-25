@@ -82,6 +82,7 @@ const useStyles = makeStyles(theme => ({
 		},
 	},
 	moreInfo: {
+		// boxShadow: theme.shadows[1],
 		color: theme.palette.type === 'dark' ? '#ededed' : '#ffffff',
 		backgroundColor: '#000',
 		'&:hover': {
@@ -93,6 +94,7 @@ const useStyles = makeStyles(theme => ({
 		},
 	},
 	learnMore: {
+		// boxShadow: theme.shadows[3],
 		color: theme.palette.type === 'dark' ? '#ededed' : '#ffffff',
 		backgroundColor: '#000',
 		'&:hover': {
@@ -182,6 +184,9 @@ const useStyles = makeStyles(theme => ({
 		textAlign: 'left',
 		overflowScrolling: 'touch',
 		WebkitOverflowScrolling: 'touch',
+		[theme.breakpoints.down('xs')]: {
+			borderTop: theme.palette.type === 'dark' && `1px solid #00000000`,
+		},
 	},
 	footerText: {
 		fontSize: 12.5,
@@ -244,6 +249,7 @@ const useStyles = makeStyles(theme => ({
 	modalBackButton: {
 		color: theme.palette.text.secondary,
 		marginTop: theme.spacing(3),
+		boxShadow: theme.shadows[3],
 		[theme.breakpoints.down('sm')]: {
 			marginBottom: theme.spacing(6),
 			width: '100%',
