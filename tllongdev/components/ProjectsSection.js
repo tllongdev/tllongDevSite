@@ -9,7 +9,7 @@ let projects = [
 		headline: 'Real-time Object Recognition and Language Translation',
 		technologies: 'Swift, CoreML, Google Translate API',
 		shortDescription:
-			'Translate Object is an iOS app utilizing machine learning and language translation to identify objects and translate them to a language of your choice.',
+			'Translate Object is an iOS app utilizing machine learning and language translation to identify objects and translate the name of the object to a language of your choice.',
 		description:
 			"'Translate Object' is an iOS app written in Swift that utilizes CoreML and the ResNet50 Convolutional Neural Network to identify objects in the mobile device's live camera feed in real-time. The name of the object is then translated to a foreign language of the user's choice in real-time via a Google Cloud Services API. The user can actively switch languages while using the app. The native language is set to the user's mobile device preference. \n\nThis application was created as my 'Hackathon' project at Fullstack Academy. It won the 'Nerd Cred' award for most technically challenging project.",
 		mediaType: 'video',

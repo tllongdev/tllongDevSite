@@ -18,7 +18,7 @@ import ProjectMedia from './ProjectMedia';
 
 const useStyles = makeStyles(theme => ({
 	projectCard: {
-		minHeight: 300,
+		minHeight: 320,
 		marginBottom: theme.spacing(6),
 		padding: 0,
 		borderRadius: 8,
@@ -28,6 +28,9 @@ const useStyles = makeStyles(theme => ({
 		border:
 			theme.palette.type === 'light' ? `1px solid ${theme.palette.text.primary}` : `1px solid ${theme.palette.divider}`,
 		cursor: 'pointer',
+		[theme.breakpoints.down('xs')]: {
+			minHeight: 480,
+		},
 	},
 	container: {
 		display: 'flex',
@@ -96,7 +99,12 @@ const useStyles = makeStyles(theme => ({
 			color: theme.palette.type === 'light' ? '#000000' : '#ffffff',
 			border: theme.palette.type === 'light' ? '1px solid #000' : '1px solid #ededed',
 		},
-		[theme.breakpoints.up('xs')]: {
+		width: '100%',
+		order: 3,
+		marginBottom: theme.spacing(3),
+		[theme.breakpoints.up('sm')]: {
+			height: 0,
+			width: 0,
 			display: 'none',
 		},
 	},
@@ -113,8 +121,38 @@ const useStyles = makeStyles(theme => ({
 		display: 'flex',
 		WebkitBoxPack: 'justify',
 		justifyContent: 'space-between',
-		alignItems: 'flex-end',
+		alignItems: 'center',
 		margin: theme.spacing(3),
+		[theme.breakpoints.down('xs')]: {
+			flexWrap: 'wrap',
+			justifyContent: 'space-between˝',
+			alignItems: 'center',
+		},
+	},
+	shortDescription: {
+		fontWeight: 500,
+		fontSize: 14,
+		[theme.breakpoints.down('xs')]: {
+			order: 2,
+		},
+	},
+	mediaBox: {
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		// borderRadius: 12,
+		overflow: 'hidden',
+		width: 151,
+		minWidth: '40%',
+		height: 151,
+		marginLeft: theme.spacing(3),
+		[theme.breakpoints.down('xs')]: {
+			order: 1,
+			marginLeft: theme.spacing(0),
+			paddingBottom: theme.spacing(3),
+			height: 180,
+			width: '100%',
+		},
 	},
 	footerWrapper: {
 		color: 'inherit',
@@ -126,7 +164,7 @@ const useStyles = makeStyles(theme => ({
 	footer: {
 		flex: '1 1',
 		// height: theme.spacing(3),
-		maxHeight: theme.spacing(6),
+		maxHeight: theme.spacing(7),
 		padding: theme.spacing(0, 3),
 		display: 'flex',
 		alignItems: 'center',
@@ -147,26 +185,16 @@ const useStyles = makeStyles(theme => ({
 	},
 	footerText: {
 		fontSize: 12.5,
+		// fontWeight: 600,
 		[theme.breakpoints.down('md')]: {
 			overflow: 'none',
 			fontSize: 11,
 			whiteSpace: 'normal',
 			overflow: 'none',
 		},
-	},
-	mediaBox: {
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		borderRadius: 12,
-		overflow: 'hidden',
-		width: 151,
-		minWidth: '30%',
-		height: 151,
-	},
-	media: {
-		maxHeight: '100%',
-		maxWidth: '100%',
+		[theme.breakpoints.down('xs')]: {
+			display: 'none',
+		},
 	},
 	//modal
 	modal: {
@@ -179,9 +207,9 @@ const useStyles = makeStyles(theme => ({
 		cursor: 'pointer',
 	},
 	paper: {
-		width: '95vw',
+		width: '99vw',
 		maxWidth: 1048,
-		maxHeight: '95vh',
+		maxHeight: '99vh',
 		backgroundColor: theme.palette.type === 'light' ? '#fff' : '#000',
 		border:
 			theme.palette.type === 'light'
@@ -215,7 +243,11 @@ const useStyles = makeStyles(theme => ({
 	// },
 	modalBackButton: {
 		color: theme.palette.text.secondary,
-		marginTop: 8,
+		marginTop: theme.spacing(3),
+		[theme.breakpoints.down('sm')]: {
+			marginBottom: theme.spacing(6),
+			width: '100%',
+		},
 	},
 }));
 
@@ -244,7 +276,7 @@ export default ({ title, headline, technologies, shortDescription, description, 
 								<h3
 									style={{ fontSize: `clamp(20px,min(((1vw + 1vh)/2)*2), 28px)`, fontWeight: 600, margin: '0px 0px' }}
 								>
-									" {title} "
+									{title}
 								</h3>
 								<Typography variant='body1' component='div' style={{ fontWeight: 700, fontSize: 12, marginTop: 6 }}>
 									{headline}
@@ -256,15 +288,24 @@ export default ({ title, headline, technologies, shortDescription, description, 
 						</div>
 						<div className={classes.bottom}>
 							<div className={classes.middle}>
-								<Typography variant='body2' component='h4' style={{ fontWeight: 500, fontSize: 14 }}>
+								<Typography variant='body2' component='h4' className={classes.shortDescription}>
 									{shortDescription}
 								</Typography>
+								<div className={classes.mediaBox}>
+									<ProjectMedia mediaType={mediaType} media={media} />
+								</div>
 							</div>
 							{/* <div className={classes.footerWrapper}> */}
 							<div className={classes.footer}>
+								{/* <Button variant='outlined' size='small' className={classes.learnMore}>
+									learn more
+								</Button> */}
 								<Typography variant='caption' component='h4' className={classes.footerText}>
 									{technologies}
 								</Typography>
+								<Button variant='outlined' size='small' className={classes.learnMore}>
+									learn more
+								</Button>
 							</div>
 							{/* </div> */}
 						</div>
@@ -301,16 +342,16 @@ export default ({ title, headline, technologies, shortDescription, description, 
 									{links.map((link, key) => (
 										<IconButton key={key} href={link.link} target='_blank'>
 											{link.type === 'GitHub' ? (
-												<GitHubIcon />
+												<GitHubIcon fontSize='small' />
 											) : link.type === 'YouTube' ? (
-												<YouTubeIcon />
+												<YouTubeIcon fontSize='small' />
 											) : (
-												<LinkIcon />
+												<LinkIcon fontSize='small' />
 											)}
 										</IconButton>
 									))}
 								</h2>
-								<p style={{ fontSize: `clamp(12.5px,min(((1vw + 1vh)/2)*2), 16px)` }} id='transition-modal-description'>
+								<p style={{ fontSize: `clamp(14px,min(((1vw + 1vh)/2)*2), 16px)` }} id='transition-modal-description'>
 									{description}
 								</p>
 								<p style={{ fontSize: `clamp(12px,min(((1vw + 1vh)/2)*2), 14px)` }} id='transition-modal-description'>

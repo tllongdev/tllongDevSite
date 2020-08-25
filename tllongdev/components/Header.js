@@ -41,9 +41,7 @@ const useStyles = makeStyles(theme => ({
 		marginRight: theme.spacing(3),
 		// boxShadow: theme.shadows[9],
 		border:
-			theme.palette.type === 'light'
-				? `1px solid ${theme.palette.text.primary}`
-				: `1px solid ${theme.palette.divider}`,
+			theme.palette.type === 'light' ? `1px solid ${theme.palette.text.primary}` : `1px solid ${theme.palette.divider}`,
 	},
 	name: {
 		display: 'flex',
@@ -179,8 +177,8 @@ export default function Header(props) {
 						<div className={classes.titleRight}>
 							{/* <Paper variant='outlined' className={classes.quote}> */}
 							<Typography variant='subtitle2' component='h3' className={classes.quote}>
-								" Hi. I'm Tim, a Full Stack Developer building innovative custom websites and applications. Let's build
-								something together. "
+								" Hi. I'm Tim, a Full Stack Developer building innovative websites and applications for the modern
+								world. Let's build something together. "
 							</Typography>
 							{/* </Paper> */}
 						</div>
