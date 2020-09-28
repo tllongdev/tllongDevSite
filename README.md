@@ -5,4 +5,3 @@
 - Next.js
 - React
 - Material UI
-- react-spring

@@ -63,7 +63,7 @@ const otherInterests = [
 	'IC and Electric Motors',
 ];
 
-const continuingToLearn = ['Python', 'Ruby on Rails', 'GPT'];
+const continuingToLearn = ['C#', 'ASP .NET Core', 'Xamarin', 'Python', 'Ruby on Rails', 'GPT'];
 
 const useStyles = makeStyles(theme => ({
 	aboutTitle: {
