@@ -18,9 +18,12 @@ const wellVersedIn = [
 	'Azure DevOps',
 	'Databricks',
 	'TensorFlow',
+	'Open AI',
 	'CoreML',
 	// 'Object Oriented Programming',
 	// 'Functional Programming',
+	'Xamarin',
+	'React Native',
 	'GraphQL',
 	'Apollo',
 	'Bootstrap',
@@ -37,14 +40,13 @@ const wellVersedIn = [
 const knowledgeableIn = [
 	'Python',
 	'Swift',
+	'AWS',
+	'Firebase',
 	'MongoDB',
 	'MySQL',
 	'GSAP',
 	'Three.js',
-	'AWS Lambdas',
 	'Prisma',
-	'TypeORM',
-	'TypeGraphQL',
 	"Google Cloud API's",
 ];
 
@@ -66,7 +68,7 @@ const otherInterests = [
 	'IC and Electric Motors',
 ];
 
-const continuingToLearn = ['C#', 'ASP .NET Core', 'Xamarin', 'Python', 'Ruby on Rails', 'GPT'];
+const continuingToLearn = ['R', 'TurboRepo', 'Nuxt.js'];
 
 const useStyles = makeStyles(theme => ({
 	aboutTitle: {
