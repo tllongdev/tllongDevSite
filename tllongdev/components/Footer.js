@@ -94,7 +94,7 @@ export default function Footer(props) {
 					</section>
 					<div className={classes.footerWrapper}>
 						<span className={classes.footerCopyright}>
-							<span>Copyright</span> © 2020 Timothy Lee Long. All rights reserved.
+							<span>Copyright</span> © {new Date().getFullYear()} Timothy Lee Long. All rights reserved.
 						</span>
 						<div className={classes.footerContact}>
 							<ul className={classes.footerSocial}>
