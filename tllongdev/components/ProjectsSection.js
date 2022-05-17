@@ -10,9 +10,9 @@ let projects = [
 		headline: 'Revenue Cycle Management Performance Elevating Platform ',
 		technologies: 'SQL Server, Databricks, C#, Python, Vue.js, Azure DevOps',
 		shortDescription:
-			'Qodex is an AI powered suite of Revenue Cycle Management performance elevating modules utilized by large hospitals, health care providers, and goverment.',
+			'Qodex is an AI powered suite of Revenue Cycle Management performance elevating modules utilized by hospitals, health care providers, and goverment.',
 		description:
-		'Qodex is an AI powered suite of Revenue Cycle Management performance elevating modules utilized by large hospitals, health care providers, and goverment. At Qodex, I am part of the core development team creating and maintaining the "Quality Audit", and "Productivity" modules.',
+		'Qodex is "Revenue Cycle Management Performance Elevating Platform" in use at top hospitals, health care providers, and goverment. The various modules that comprise Qodex provide AI powered analytics, auditing, claim denials management and prevention, and more. At Qodex, I am part of the core development team creating and maintaining the "Quality Audit", and "Productivity" modules.',
 		mediaType: 'image',
 		media: qodexLaptop,
 		links: [
