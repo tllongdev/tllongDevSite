@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 
 const transObjVid = './TranslateObjDemo.mp4';
 const qodexLaptop = './qodex-laptop-1.png';
+const zWalletVideo = './Zooyza_Z_Wallet_video.mp4'
 
 let projects = [
 	{
@@ -12,11 +13,26 @@ let projects = [
 		shortDescription:
 			'Qodex is an AI-powered suite of Revenue Cycle Management performance elevating modules utilized by hospitals, health care providers, and goverment.',
 		description:
-		'Qodex is "Revenue Cycle Management Performance Elevating Platform" in use at top hospitals, health care providers, and goverment. The various modules that comprise Qodex provide AI-powered analytics, auditing, claim denials management and prevention, and more. At Qodex, I am part of the core development team creating and maintaining the "Quality Audit", and "Productivity" modules.',
+		'Qodex is a "Revenue Cycle Management Performance Elevating Platform" in use at top hospitals, health care providers, and goverment. The various modules that comprise Qodex provide AI-powered analytics, auditing, claim denials management and prevention, and more. At Qodex, I am part of the core development team creating and maintaining the "Quality Audit", and "Productivity" modules.',
 		mediaType: 'image',
 		media: qodexLaptop,
 		links: [
 			{ type: 'link', link: 'https://risefoc.com/qodex' },
+			// { type: 'YouTube', link: 'https://www.youtube.com/watch?v=evU2vNjY62E' },
+		],
+	},
+	{
+		title: 'Z Wallet',
+		headline: 'Mobile E-Wallet Solution',
+		technologies: 'Xamarin, SQL Server, C#, ASP.Net, Next.js, Azure DevOps',
+		shortDescription:
+			'Z Wallet is a mobile banking solution with virtual card generation, quick money transfers, and AI financial guidance.',
+		description:
+		'Z Wallet is a mobile banking solution backed by Zooyza, a card issuer and processer, that takes the bank out of banking with features like virtual debit card generation, quick money transfers, and AI financial guidance. I was the lead developer for the Z Wallet mobile platform.',
+		mediaType: 'video',
+		media: zWalletVideo,
+		links: [
+			{ type: 'link', link: 'https://zooyza.com/' },
 			// { type: 'YouTube', link: 'https://www.youtube.com/watch?v=evU2vNjY62E' },
 		],
 	},
