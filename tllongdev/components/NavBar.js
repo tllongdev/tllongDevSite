@@ -1,4 +1,4 @@
-import React, { useRef, useState, useLayoutEffect } from 'react';
+import React, { useRef, useState, useLayoutEffect, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -233,7 +233,7 @@ export default function NavBar({ parRef, handleScroll }) {
 	const nav = useRef();
 	const [navHeight, setNavHeight] = useState(0);
 	const [isMobile, setMobile] = useState(false);
-	useLayoutEffect(() => {
+	useEffect(() => {
 		nav.current && setNavHeight(nav.current.clientHeight);
 	}, [isMobile]);
 	const checkIsMobile = () => (window.innerWidth < 960 ? true : false);
