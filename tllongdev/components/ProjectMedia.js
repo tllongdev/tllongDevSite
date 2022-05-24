@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default ({ mediaType, media }) => {
+const ProjectMedia = ({ mediaType, media }) => {
 	const classes = useStyles();
 
 	return (
@@ -25,3 +25,4 @@ export default ({ mediaType, media }) => {
 		</>
 	);
 };
+export default ProjectMedia;

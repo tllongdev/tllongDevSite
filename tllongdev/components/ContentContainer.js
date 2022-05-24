@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default ({ children }) => {
+const ContentContainer = ({ children }) => {
 	const classes = useStyles();
 
 	return (
@@ -32,3 +32,5 @@ export default ({ children }) => {
 		</>
 	);
 };
+
+export default ContentContainer;

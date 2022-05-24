@@ -99,7 +99,7 @@ let projects = [
 	},
 ];
 
-export default () => {
+const ProjectsSection = () => {
 	return (
 		<>
 			{projects.map((project, key) => (
@@ -118,3 +118,4 @@ export default () => {
 		</>
 	);
 };
+export default ProjectsSection;

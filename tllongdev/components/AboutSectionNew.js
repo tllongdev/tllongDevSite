@@ -107,7 +107,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default props => {
+const AboutSectionNew = props => {
 	const classes = useStyles();
 
 	return (
@@ -206,3 +206,4 @@ export default props => {
 		</>
 	);
 };
+export default AboutSectionNew;

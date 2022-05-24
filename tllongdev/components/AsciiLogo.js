@@ -1,4 +1,4 @@
-export default () => (
+const tllongdevAsciiLogo =  () => (
 	<>
 		{console.log(
 			[
@@ -14,3 +14,5 @@ export default () => (
 		{console.log('\nhttps://github.com/tllongdev\n\n')}
 	</>
 );
+
+export default tllongdevAsciiLogo;

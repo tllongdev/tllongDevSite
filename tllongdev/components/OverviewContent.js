@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default props => {
+const OverviewContent = props => {
 	const classes = useStyles();
 
 	return (
@@ -42,3 +42,4 @@ export default props => {
 		</>
 	);
 };
+export default OverviewContent;

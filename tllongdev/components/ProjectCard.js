@@ -257,7 +257,7 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-export default ({ title, headline, technologies, shortDescription, description, mediaType, media, links }) => {
+const ProjectCard = ({ title, headline, technologies, shortDescription, description, mediaType, media, links }) => {
 	const classes = useStyles();
 	const theme = useTheme();
 
@@ -380,3 +380,4 @@ export default ({ title, headline, technologies, shortDescription, description, 
 		</>
 	);
 };
+export default ProjectCard;
