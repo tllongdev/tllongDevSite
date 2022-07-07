@@ -13,7 +13,7 @@ let projects = [
 		shortDescription:
 			'Qodex is an AI-powered "Revenue Cycle Management Performance Elevating Platform" utilized by hospitals, health care providers, and goverment.',
 		description:
-		'Qodex is a "Revenue Cycle Management Performance Elevating Platform" in use at top hospitals, health care providers, and goverment. The various modules that comprise Qodex provide AI-powered analytics, auditing, claim denials management and prevention, and more. At Qodex, I am part of the core development team creating and maintaining the "Quality Audit", and "Productivity" modules.',
+		'Qodex is a "Revenue Cycle Management Performance Elevating Platform" in use at top hospitals, health care providers, and government. The various modules that comprise Qodex provide AI-powered analytics, auditing, claim denials management and prevention, and more. At Qodex, I am part of the core development team creating and maintaining the "Quality Audit", and "Productivity" modules.',
 		mediaType: 'image',
 		media: qodexLaptop,
 		links: [
