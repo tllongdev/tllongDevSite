@@ -12,7 +12,7 @@ let projects = [
 		headline: 'Cloud Infrastructure Cost Optimization Applications',
 		technologies: 'Azure Functions, Databricks, Docker, Kubernetes, React.js, Next.js, Power BI',
 		shortDescription:
-			'Cloud Infrastructure Cost Optimization Applications for CVS Health / Aetna that save the company millions of dollars annually.',
+			'Cloud Infrastructure Cost Optimization Applications for CVS Health / Aetna that save the company millions of dollars.',
 		description:
 			'CVS Health / Aetna is a Fortune 5 company with a massive cloud infrastructure footprint (Azure, GCP, AWS). I am part of the team that is developing cloud cost optimization applications that save the company millions of dollars annually. The applications are built on Azure Functions, Databricks, React.js, Next.js, Power BI, and Grafana. The applications provide insights into cloud infrastructure costs, identify cost saving opportunities, provide recommendations to optimize cloud infrastructure costs, and applications bult from end-to-end to act on recommendations and provide visibility and reporting: Automated Virtual Machine Up/Down "Parking", Virtual Machine Right Sizing, Orphan Disk Deletion, Reporting Analytics.',
 		mediaType: 'image',
