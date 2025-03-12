@@ -8,13 +8,13 @@ const zWalletVideo = './Zooyza_Z_Wallet_video.mp4'
 
 let projects = [
 	{
-		title: 'CVS Health ∞ Aetna - Cloud Cost Optimization Application',
+		title: 'CVS Health / Aetna \n Cloud Cost Optimization Application',
 		headline: 'Cloud Infrastructure Cost Optimization Applications',
 		technologies: 'Azure Functions (Python, Go), Databricks (ETL, DLT, ML Flow), React.js, Next.js, Power BI, Grafana',
 		shortDescription:
-			'Cloud Infrastructure Cost Optimization Applications for CVS Health / Aetna that saves the company millions of dollars annually.',
+			'Cloud Infrastructure Cost Optimization Applications for CVS Health / Aetna that save the company millions of dollars annually.',
 		description:
-			'CVS Health / Aetna is a Fortune 5 company with a massive cloud infrastructure footprint (Azure, GCP, AWS). I am part of the team that is developing cloud cost optimization applications that saves the company millions of dollars annually. The applications are built on Azure Functions, Databricks, React.js, Next.js, Power BI, and Grafana. The applications provide insights into cloud infrastructure costs, identify cost saving opportunities, provide recommendations to optimize cloud infrastructure costs, and applications bult from end-to-end to act on recommendations and provide visibility and reporting: Automated Virtual Machine Up/Down "Parking", Virtual Machine Right Sizing, Orphan Disk Deletion, Reporting Analytics.',
+			'CVS Health / Aetna is a Fortune 5 company with a massive cloud infrastructure footprint (Azure, GCP, AWS). I am part of the team that is developing cloud cost optimization applications that save the company millions of dollars annually. The applications are built on Azure Functions, Databricks, React.js, Next.js, Power BI, and Grafana. The applications provide insights into cloud infrastructure costs, identify cost saving opportunities, provide recommendations to optimize cloud infrastructure costs, and applications bult from end-to-end to act on recommendations and provide visibility and reporting: Automated Virtual Machine Up/Down "Parking", Virtual Machine Right Sizing, Orphan Disk Deletion, Reporting Analytics.',
 		mediaType: 'image',
 		media: cvsDiag,
 		links: [

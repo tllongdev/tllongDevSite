@@ -1,7 +1,6 @@
 ## tllong.dev Website Repository
 
-### Technologies Used
+### Technologies
 
 - Next.js
-- React
 - Material UI
