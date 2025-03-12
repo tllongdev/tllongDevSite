@@ -4,50 +4,49 @@ import Box from '@material-ui/core/Box';
 import Chip from '@material-ui/core/Chip';
 
 const wellVersedIn = [
+	'Python',
 	'C#',
 	'Javascript',
-	'Typescript',
 	'SQL',
-	'React',
-	'Vue',
-	'Next.js',
+	'Databricks',
 	'ASP.net',
 	'Node.js',
+	'React.js',
+	'Next.js',
+	'Vue.js',
 	'SQL Server',
 	'PostgreSQL',
-	'Azure DevOps',
-	'Databricks',
+	'Azure Functions',
+	'Azure',
+	'Google Cloud',
 	'TensorFlow',
+	'SciKit Learn',
+	'Pandas',
 	'Open AI',
 	'CoreML',
-	// 'Object Oriented Programming',
-	// 'Functional Programming',
+	'Docker',
+	'Kubernetes',
 	'Xamarin',
 	'React Native',
 	'GraphQL',
 	'Apollo',
-	'Bootstrap',
 	'Tailwind CSS',
 	'Material UI',
 	'Agile (Scrum)',
 	'Jira',
 	'Puppeteer.js',
-	// 'Kanban Boards',
-	'Mocha',
-	'Chai',
+	'Selenium',
+	'CI/CD',
 ];
 
 const knowledgeableIn = [
-	'Python',
 	'Swift',
 	'AWS',
 	'Firebase',
-	'MongoDB',
-	'MySQL',
 	'GSAP',
 	'Three.js',
-	'Prisma',
-	"Google Cloud API's",
+	'Adobe Creative Suite',
+	'Figma',
 ];
 
 const otherInterests = [
@@ -61,14 +60,13 @@ const otherInterests = [
 	'Running',
 	'Cycling',
 	'Hiking',
-	// 'Cat Dad',
 	// 'Long Range Target Shooting',
 	'Electrical Engineering',
 	'Sustainable Energy',
 	'IC and Electric Motors',
 ];
 
-const continuingToLearn = ['R', 'TurboRepo', 'Nuxt.js'];
+const continuingToLearn = ['Go', 'In-depth Cloud Infrastructure and Security', 'Quantum Computing'];
 
 const useStyles = makeStyles(theme => ({
 	aboutTitle: {

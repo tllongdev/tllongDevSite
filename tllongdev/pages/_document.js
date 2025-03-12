@@ -15,16 +15,16 @@ export default class MyDocument extends Document {
 
 					<meta property='og:title' content='Timothy Lee Long - Software Engineer' />
 					<meta property='og:image' content='https://tllong.dev/tllong.devScreenShot2020-08-04.png' />
-					<meta property='og:description' content='Full Stack Software Engineering and Web Development' />
+					<meta property='og:description' content='Full Stack Software Developer, Data Engineer, AI / ML Developer, Cloud Engineer' />
 					<meta property='og:url' content='https://tllong.dev' />
 
 					<meta name='og:title' content='Timothy Lee Long - Software Engineer' />
-					<meta name='og:description' content=' Full Stack Software Engineering and Web Development' />
+					<meta name='og:description' content=' Full Stack Software Developer, Data Engineer, AI / ML Developer, Cloud Engineer' />
 					<meta name='og:image' content='https://tllong.dev/tllong.devScreenShot2020-08-04.png' />
 					<meta name='og:url' content='https://tllong.dev' />
 
 					<meta name='twitter:title' content='Timothy Lee Long - Software Engineer ' />
-					<meta name='twitter:description' content='Full Stack Software Engineering and Web Development' />
+					<meta name='twitter:description' content='Full Stack Software Developer, Data Engineer, AI / ML Developer, Cloud Engineer' />
 					<meta name='twitter:image' content='https://tllong.dev/tllong.devScreenShot2020-08-04.png' />
 
 					<link
