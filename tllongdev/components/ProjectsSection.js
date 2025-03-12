@@ -8,8 +8,8 @@ const zWalletVideo = './Zooyza_Z_Wallet_video.mp4'
 
 let projects = [
 	{
-		title: 'CVS Health / Aetna \n Cloud Cost Optimization Application',
-		headline: 'Cloud Infrastructure Cost Optimization Applications',
+		title: 'CVS Health / Aetna - CCO',
+		headline: 'Cloud Cost Optimization Applications',
 		technologies: 'Azure Functions, Databricks, Docker, Kubernetes, React.js, Next.js, Power BI',
 		shortDescription:
 			'Cloud Infrastructure Cost Optimization Applications for CVS Health / Aetna that save the company millions of dollars.',
