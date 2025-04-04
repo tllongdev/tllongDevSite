@@ -14,6 +14,7 @@ const wellVersedIn = [
 	'React.js',
 	'Next.js',
 	'Vue.js',
+	'Blazor',
 	'SQL Server',
 	'PostgreSQL',
 	'Azure Functions',
