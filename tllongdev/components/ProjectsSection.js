@@ -22,9 +22,9 @@ let projects = [
 		],
 	},
 	{
-		title: 'Qodex',
+		title: 'Healthrise / Qodex',
 		headline: 'Revenue Cycle Management Performance Elevating Platform ',
-		technologies: 'SQL Server, Databricks, C#, Python, Vue.js, Azure DevOps',
+		technologies: 'C#, Python, SQL Server, Databricks, ASP.net, Blazor, Vue.js, Azure Functions, Scikit-Learn',
 		shortDescription:
 			'Qodex is an AI-powered "Revenue Cycle Management Performance Elevating Platform" utilized by hospitals, health care providers, and goverment.',
 		description:
@@ -32,13 +32,11 @@ let projects = [
 		mediaType: 'image',
 		media: qodexLaptop,
 		links: [
-			{ type: 'link', link: 'https://risefoc.com/qodex' },
-			// { type: 'YouTube', link: 'https://www.youtube.com/watch?v=evU2vNjY62E' },
+			{ type: 'link', link: 'https://www.healthrise.com/technology-analytics/' },
 		],
 	},
 	{
-		title: 'Z-Wallet',
-		headline: 'Mobile E-Wallet Solution',
+		title: 'Z-Wallet by BEST Card Solutions',
 		technologies: 'Xamarin, SQL Server, C#, ASP.Net, Next.js, Azure DevOps',
 		shortDescription:
 			'Z-Wallet is a mobile banking solution with virtual card generation, quick money transfers, and AI financial guidance.',
