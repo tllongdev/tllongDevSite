@@ -24,7 +24,7 @@ let projects = [
 	{
 		title: 'Healthrise / Qodex',
 		headline: 'Revenue Cycle Management Performance Elevating Platform ',
-		technologies: 'C#, Python, SQL Server, Databricks, ASP.net, Blazor, Vue.js, Azure Functions, Scikit-Learn',
+		technologies: 'C#, Python, SQL Server, Databricks, ASP.net, Blazor, Vue.js, Azure Functions',
 		shortDescription:
 			'Qodex is an AI-powered "Revenue Cycle Management Performance Elevating Platform" utilized by hospitals, health care providers, and goverment.',
 		description:
