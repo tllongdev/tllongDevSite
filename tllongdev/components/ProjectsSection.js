@@ -10,7 +10,7 @@ let projects = [
 	{
 		title: 'CVS Health / Aetna - CCO',
 		headline: 'Cloud Cost Optimization Applications',
-		technologies: 'Azure Functions, Databricks, Docker, Kubernetes, React.js, Next.js, Power BI',
+		technologies: 'Databricks, MLflow, SkLearn, PySpark, Azure Functions, Docker, Next.js',
 		shortDescription:
 			'Cloud Infrastructure Cost Optimization Applications for CVS Health / Aetna that save the company millions of dollars.',
 		description:
@@ -24,7 +24,7 @@ let projects = [
 	{
 		title: 'Healthrise / Qodex',
 		headline: 'Revenue Cycle Management Performance Elevating Platform ',
-		technologies: 'C#, Python, SQL Server, Databricks, ASP.net, Blazor, Vue.js, Azure Functions',
+		technologies: ' ASP.net, SQL Server, Databricks, SkLearn, Blazor, Vue.js, Azure Functions ',
 		shortDescription:
 			'Qodex is an AI-powered "Revenue Cycle Management Performance Elevating Platform" utilized by hospitals, health care providers, and goverment.',
 		description:
@@ -37,7 +37,7 @@ let projects = [
 	},
 	{
 		title: 'Z-Wallet by BEST Card Solutions',
-		technologies: 'Xamarin, SQL Server, C#, ASP.Net, Next.js, Azure DevOps',
+		technologies: 'Xamarin, OpenAI, ASP.net, SQL Server, Next.js, Azure DevOps',
 		shortDescription:
 			'Z-Wallet is a mobile banking solution with virtual card generation, quick money transfers, and AI financial guidance.',
 		description:
