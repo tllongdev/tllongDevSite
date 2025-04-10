@@ -177,7 +177,7 @@ export default function Header(props) {
 						<div className={classes.titleRight}>
 							{/* <Paper variant='outlined' className={classes.quote}> */}
 							<Typography variant='subtitle2' component='h3' className={classes.quote}>
-								" Hi. I'm Tim, a Full Stack Software Developer building innovative applications for the modern world. Let's build something together. "
+								" Hi. I'm Tim, a Full Stack Software / AI / ML Developer building innovative applications for the modern world. Let's build something together. "
 							</Typography>
 							{/* </Paper> */}
 						</div>
